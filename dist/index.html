@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#125EA0">
+  <meta name="description" content="ACP / Advanced Composites Protocol：以链上可信溯源、RWA 权益映射与协同治理，连接先进复合材料的研发、制造与服务。">
+  <meta property="og:title" content="ACP — Advanced Composites Protocol">
+  <meta property="og:description" content="让先进复合材料的每一段生命周期，都有迹可循。">
+  <meta property="og:type" content="website">
+  <title>ACP — Advanced Composites Protocol</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --blue: #125EA0;
+      --blue-2: #247fc3;
+      --blue-soft: #e8f3fb;
+      --navy: #0a2338;
+      --navy-2: #102f49;
+      --ink: #172b3c;
+      --muted: #657787;
+      --line: #dce6ed;
+      --paper: #f7fafc;
+      --white: #fff;
+      --mint: #90d8ce;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(10, 35, 56, .10);
+      --max: 1180px;
+      --sans: Inter, "Aptos", "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--blue); font-size: 11px; font-weight: 760; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+    .section { padding: 112px 0; }
+    .section-head { max-width: 690px; margin-bottom: 44px; }
+    .section-head h2 { margin: 15px 0 14px; font-size: clamp(32px, 4vw, 52px); line-height: 1.12; letter-spacing: -.045em; font-weight: 670; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.85; }
+    .text-blue { color: var(--blue); }
+    .topbar { position: fixed; z-index: 20; inset: 0 0 auto; height: 78px; background: rgba(255,255,255,.9); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(220,230,237,.75); transition: box-shadow .25s, background .25s; }
+    .topbar.scrolled { box-shadow: 0 8px 30px rgba(10,35,56,.07); background: rgba(255,255,255,.96); }
+    .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 11px; min-width: 240px; }
+    .brand img { width: 38px; height: 38px; object-fit: contain; }
+    .brand-name { display: flex; flex-direction: column; gap: 3px; }
+    .brand-name strong { color: var(--navy); font-size: 17px; line-height: 1; font-weight: 780; letter-spacing: .075em; }
+    .brand-name small { color: #6e8394; font-size: 8px; font-weight: 700; letter-spacing: .12em; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px); }
+    .nav-links a { color: #435767; font-size: 12px; font-weight: 620; transition: color .2s; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--blue); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 21px; border-radius: 8px; border: 1px solid transparent; font-size: 13px; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s, border-color .2s; cursor: pointer; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--white); background: var(--blue); box-shadow: 0 9px 22px rgba(18,94,160,.19); }
+    .button-primary:hover { background: #0d528f; box-shadow: 0 12px 26px rgba(18,94,160,.28); }
+    .button-ghost { color: var(--navy); background: rgba(255,255,255,.74); border-color: #cbd9e3; }
+    .button-ghost:hover { border-color: var(--blue); color: var(--blue); }
+    .button-small { min-height: 39px; padding: 0 15px; font-size: 11px; }
+    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 8px; color: var(--navy); background: #fff; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; min-height: 720px; padding: 150px 0 68px; background: radial-gradient(ellipse at 78% 38%, rgba(36,127,195,.13), transparent 37%), linear-gradient(118deg, #f5f9fc 0%, #fff 54%, #f1f7fb 100%); }
+    .hero::before { content: ""; position: absolute; inset: 0; opacity: .34; background-image: linear-gradient(rgba(18,94,160,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(18,94,160,.055) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(90deg, #000, transparent 82%); pointer-events: none; }
+    .hero::after { content: ""; position: absolute; width: 620px; height: 620px; top: 82px; right: -220px; border-radius: 50%; border: 1px solid rgba(18,94,160,.10); box-shadow: 0 0 0 40px rgba(18,94,160,.025), 0 0 0 100px rgba(18,94,160,.018); pointer-events: none; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(390px, .84fr); align-items: center; gap: 48px; }
+    .hero-copy { max-width: 640px; }
+    .hero .eyebrow { color: #426f91; }
+    .hero h1 { margin: 22px 0 22px; color: var(--navy); max-width: 660px; font-size: clamp(42px, 5.3vw, 70px); line-height: 1.13; letter-spacing: -.055em; font-weight: 690; }
+    .hero h1 span { color: var(--blue); }
+    .hero-lead { max-width: 580px; margin: 0; color: #5c7181; font-size: 16px; line-height: 1.9; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
+    .hero-meta { display: flex; align-items: center; gap: 15px; margin-top: 46px; color: #657787; font-size: 11px; letter-spacing: .04em; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-meta span + span::before { content: ""; width: 1px; height: 13px; margin-right: 7px; background: #b6c7d3; }
+    .hero-meta i { width: 6px; height: 6px; border-radius: 50%; background: var(--blue-2); }
+    .hero-visual { position: relative; min-height: 455px; display: grid; place-items: center; }
+    .visual-orbit { position: absolute; width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(18,94,160,.14); }
+    .visual-orbit::before, .visual-orbit::after { content: ""; position: absolute; border-radius: 50%; border: 1px dashed rgba(18,94,160,.19); inset: 28px; }
+    .visual-orbit::after { inset: 68px; border-style: solid; opacity: .7; }
+    .orbit-dot { position: absolute; width: 11px; height: 11px; background: var(--blue); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 0 0 5px rgba(18,94,160,.1); }
+    .orbit-dot.one { top: 48px; left: 73px; }
+    .orbit-dot.two { top: 96px; right: 26px; background: #54a6d8; }
+    .orbit-dot.three { bottom: 44px; right: 73px; background: #63b7ae; }
+    .orbit-dot.four { bottom: 79px; left: 19px; background: #8baec6; }
+    .core-card { position: relative; z-index: 1; width: min(294px, 70vw); aspect-ratio: 1; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; border: 1px solid rgba(255,255,255,.28); border-radius: 24px; background: linear-gradient(145deg, #11558e, #092943 83%); color: #fff; box-shadow: 0 28px 70px rgba(10,47,73,.28); }
+    .core-card::before { content: ""; position: absolute; width: 210px; height: 210px; right: -76px; top: -83px; border: 1px solid rgba(176,224,252,.34); border-radius: 50%; box-shadow: 0 0 0 22px rgba(176,224,252,.05), 0 0 0 54px rgba(176,224,252,.035); }
+    .core-top { position: relative; display: flex; justify-content: space-between; color: #c8e1f2; font-size: 9px; font-weight: 700; letter-spacing: .17em; }
+    .core-mark { position: absolute; inset: 0; display: grid; place-items: center; }
+    .core-mark img { width: 112px; height: 112px; filter: brightness(0) invert(1); opacity: .95; }
+    .core-bottom { position: relative; display: flex; justify-content: space-between; align-items: end; }
+    .core-bottom strong { display: block; font-size: 19px; letter-spacing: .14em; }
+    .core-bottom small { display: block; margin-top: 5px; color: #b7d1e3; font-size: 9px; letter-spacing: .1em; }
+    .core-index { color: #a8c9de; font-size: 10px; letter-spacing: .12em; }
+    .float-label { position: absolute; z-index: 2; display: flex; align-items: center; gap: 9px; padding: 10px 13px; color: #34566f; background: rgba(255,255,255,.91); border: 1px solid rgba(193,213,226,.85); border-radius: 8px; box-shadow: 0 8px 24px rgba(10,47,73,.08); font-size: 10px; font-weight: 700; white-space: nowrap; }
+    .float-label b { display: grid; place-items: center; width: 21px; height: 21px; border-radius: 6px; color: var(--blue); background: var(--blue-soft); font-size: 9px; }
+    .label-a { top: 64px; left: 3px; }
+    .label-b { top: 136px; right: -16px; }
+    .label-c { bottom: 102px; left: -10px; }
+    .label-d { bottom: 36px; right: 5px; }
+    .stats { position: relative; z-index: 2; margin-top: 46px; border-top: 1px solid #dce6ed; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 24px 16px 0 0; }
+    .stat + .stat { padding-left: 28px; border-left: 1px solid #dce6ed; }
+    .stat strong { display: block; color: var(--navy); font-size: 25px; letter-spacing: -.04em; }
+    .stat span { display: block; margin-top: 5px; color: #748593; font-size: 11px; }
+    .pain { background: var(--white); }
+    .pain-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .pain-card { min-height: 236px; padding: 25px 22px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(155deg, #fff, #fbfdfe); transition: transform .24s, box-shadow .24s, border-color .24s; }
+    .pain-card:hover { transform: translateY(-5px); border-color: #b8d2e4; box-shadow: var(--shadow); }
+    .card-number { color: #9aafbd; font-size: 10px; font-weight: 760; letter-spacing: .14em; }
+    .card-icon { width: 43px; height: 43px; display: grid; place-items: center; margin: 20px 0 17px; border-radius: 11px; background: var(--blue-soft); color: var(--blue); }
+    .card-icon svg { width: 22px; height: 22px; }
+    .pain-card h3 { margin: 0 0 8px; color: var(--navy); font-size: 16px; }
+    .pain-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .lifecycle { background: var(--paper); }
+    .lifecycle-panel { position: relative; padding: 36px; border: 1px solid #d9e6ed; border-radius: 20px; background: #fff; box-shadow: 0 18px 54px rgba(19,63,93,.045); }
+    .flow-line { position: absolute; left: 10%; right: 10%; top: 91px; height: 1px; background: linear-gradient(90deg, #b5ccdb, #5c9bc4, #89c7be); }
+    .lifecycle-steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; }
+    .life-step { padding: 0 15px 8px; text-align: center; }
+    .life-node { position: relative; z-index: 1; width: 38px; height: 38px; display: grid; place-items: center; margin: 36px auto 21px; border: 6px solid #fff; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 1px #c4d9e7, 0 8px 18px rgba(18,94,160,.18); color: #fff; font-size: 9px; font-weight: 800; }
+    .life-step:nth-child(3) .life-node { background: #4d9ec3; }
+    .life-step:nth-child(4) .life-node { background: #4e9e91; }
+    .life-step h3 { margin: 0 0 9px; color: var(--navy); font-size: 17px; }
+    .life-step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .lifecycle-note { display: flex; align-items: flex-start; gap: 12px; margin-top: 30px; padding: 16px 18px; color: #3a5b71; background: #edf6fb; border-radius: 10px; font-size: 12px; line-height: 1.8; }
+    .lifecycle-note b { color: var(--blue); white-space: nowrap; }
+    .architecture { position: relative; overflow: hidden; background: var(--navy); color: #fff; }
+    .architecture::before { content: ""; position: absolute; inset: 0; opacity: .23; background: radial-gradient(circle at 80% 14%, #2784bf, transparent 27%), linear-gradient(120deg, transparent 55%, rgba(126,188,222,.11)); pointer-events: none; }
+    .architecture .wrap { position: relative; z-index: 1; }
+    .architecture .eyebrow { color: #8bc5e7; }
+    .architecture .section-head h2 { color: #fff; }
+    .architecture .section-head p { color: #b5c8d5; }
+    .architecture-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .layer { position: relative; min-height: 240px; padding: 25px 21px; border: 1px solid rgba(189,218,237,.19); border-radius: 14px; background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.027)); }
+    .layer:not(:last-child)::after { content: "→"; position: absolute; z-index: 2; top: 38px; right: -14px; width: 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; color: #cbe4f4; background: #173b55; border: 1px solid rgba(189,218,237,.25); font-size: 12px; }
+    .layer .eyebrow { color: #80b9dc; font-size: 9px; letter-spacing: .12em; }
+    .layer .layer-icon { width: 42px; height: 42px; margin: 22px 0 18px; display: grid; place-items: center; border-radius: 10px; color: #a7d5f0; background: rgba(87,160,204,.16); }
+    .layer .layer-icon svg { width: 21px; height: 21px; }
+    .layer h3 { margin: 0 0 9px; font-size: 16px; color: #fff; }
+    .layer p { margin: 0; color: #abc0ce; font-size: 11px; line-height: 1.85; }
+    .security-note { display: flex; justify-content: space-between; gap: 24px; align-items: center; margin-top: 20px; padding: 18px 21px; border: 1px solid rgba(158,201,228,.22); border-radius: 11px; background: rgba(6,25,41,.36); }
+    .security-note strong { color: #e7f4fb; font-size: 13px; }
+    .security-note p { max-width: 760px; margin: 4px 0 0; color: #abc0ce; font-size: 11px; line-height: 1.8; }
+    .security-badge { flex: 0 0 auto; padding: 8px 12px; border: 1px solid rgba(144,216,206,.34); border-radius: 99px; color: #a7dfd6; font-size: 9px; letter-spacing: .08em; }
+    .assets { background: #fff; }
+    .asset-board { display: grid; grid-template-columns: minmax(230px, .72fr) minmax(0, 1.5fr); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 56px rgba(19,63,93,.06); }
+    .asset-tabs { display: flex; flex-direction: column; gap: 4px; padding: 17px; background: #f4f8fb; border-right: 1px solid var(--line); }
+    .asset-tab { display: flex; align-items: center; gap: 12px; min-height: 62px; width: 100%; padding: 0 14px; border: 1px solid transparent; border-radius: 10px; color: #617585; background: transparent; text-align: left; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+    .asset-tab:hover { color: var(--blue); background: #fff; }
+    .asset-tab[aria-selected="true"] { color: var(--blue); background: #fff; border-color: #c9dfed; box-shadow: 0 5px 14px rgba(18,94,160,.07); }
+    .asset-tab .tab-no { font-size: 10px; font-weight: 780; letter-spacing: .1em; color: #9aaebc; }
+    .asset-tab span:last-child { font-size: 13px; font-weight: 700; }
+    .asset-panel { min-height: 337px; padding: clamp(27px, 5vw, 50px); display: flex; flex-direction: column; justify-content: center; background: radial-gradient(circle at 100% 0, #eaf5fb, transparent 40%), #fff; }
+    .asset-panel .eyebrow { font-size: 9px; }
+    .asset-panel h3 { margin: 14px 0 12px; color: var(--navy); font-size: clamp(24px, 3vw, 34px); letter-spacing: -.035em; }
+    .asset-panel p { max-width: 620px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+    .asset-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
+    .asset-tags span { padding: 8px 10px; color: #42657d; background: #edf5fa; border-radius: 6px; font-size: 10px; font-weight: 650; }
+    .asset-footnote { margin: 19px 0 0; color: #8596a3; font-size: 10px; line-height: 1.7; }
+    .tokenomics { background: var(--paper); }
+    .token-topline { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-bottom: 21px; padding: 22px 25px; color: #fff; border-radius: 14px; background: linear-gradient(105deg, #125EA0, #0d416e 78%); }
+    .token-topline small { display: block; margin-bottom: 7px; color: #c8e2f1; font-size: 9px; font-weight: 700; letter-spacing: .15em; }
+    .token-topline strong { font-size: 21px; letter-spacing: -.03em; }
+    .token-supply { text-align: right; }
+    .token-supply strong { font-size: clamp(24px, 3vw, 34px); }
+    .allocation { padding: 27px; border: 1px solid var(--line); border-radius: 15px; background: #fff; }
+    .allocation h3 { margin: 0 0 18px; font-size: 15px; color: var(--navy); }
+    .stacked-bar { display: flex; height: 12px; overflow: hidden; border-radius: 99px; background: #e7eef3; }
+    .stacked-bar span { display: block; height: 100%; }
+    .stacked-bar span:nth-child(1) { width: 30%; background: #125EA0; }
+    .stacked-bar span:nth-child(2) { width: 30%; background: #2d82b9; }
+    .stacked-bar span:nth-child(3) { width: 15%; background: #64a9cf; }
+    .stacked-bar span:nth-child(4) { width: 20%; background: #72bdb4; }
+    .stacked-bar span:nth-child(5) { width: 5%; background: #a6cf9e; }
+    .allocation-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; margin-top: 22px; }
+    .allocation-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; padding: 14px 0; border-bottom: 1px solid #edf1f4; }
+    .allocation-row:nth-last-child(-n+1) { border-bottom: 0; }
+    .allocation-name { display: flex; gap: 10px; color: var(--ink); font-size: 12px; font-weight: 700; }
+    .allocation-name i { flex: 0 0 auto; width: 8px; height: 8px; margin-top: 4px; border-radius: 50%; background: var(--dot); }
+    .allocation-row small { display: block; margin: 5px 0 0 18px; color: #7a8b98; font-size: 10px; line-height: 1.65; }
+    .allocation-percent { color: var(--blue); font-size: 13px; font-weight: 800; }
+    .staking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+    .staking-card { padding: 23px 22px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+    .staking-card small { color: var(--blue); font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .staking-card h3 { margin: 12px 0 8px; color: var(--navy); font-size: 15px; }
+    .staking-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.85; }
+    .token-note { margin: 18px 0 0; padding: 15px 18px; border-left: 3px solid #75aacd; background: #edf5fa; color: #526d80; font-size: 11px; line-height: 1.8; }
+    .governance { background: #fff; }
+    .governance-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; align-items: stretch; }
+    .gov-card { padding: 30px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    .gov-card-dark { color: #fff; background: linear-gradient(145deg, #102f49, #0a2338); border-color: #163a56; }
+    .gov-card h3 { margin: 0 0 10px; color: var(--navy); font-size: 20px; }
+    .gov-card-dark h3 { color: #fff; }
+    .gov-card > p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .gov-card-dark > p { color: #b5c8d5; }
+    .role-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 24px; }
+    .role { min-height: 94px; padding: 15px; border: 1px solid #e1e9ee; border-radius: 10px; background: #fbfdfe; }
+    .role strong { display: block; margin-bottom: 7px; color: var(--navy); font-size: 12px; }
+    .role span { color: var(--muted); font-size: 10px; line-height: 1.7; }
+    .decision-list { margin-top: 24px; }
+    .decision { display: flex; gap: 13px; padding: 14px 0; border-top: 1px solid rgba(185,216,235,.17); }
+    .decision b { flex: 0 0 27px; height: 27px; display: grid; place-items: center; color: #b9e3f4; background: rgba(81,149,190,.2); border-radius: 7px; font-size: 10px; }
+    .decision span { color: #d1e0e9; font-size: 11px; line-height: 1.75; }
+    .roadmap { background: #f5f9fb; }
+    .roadmap-list { position: relative; display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+    .roadmap-list::before { content: ""; position: absolute; left: 6%; right: 6%; top: 23px; height: 1px; background: #bcd1df; }
+    .phase { position: relative; padding-top: 52px; }
+    .phase::before { content: ""; position: absolute; z-index: 1; top: 15px; left: 19px; width: 16px; height: 16px; border: 5px solid #f5f9fb; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 1px #b5ccda; }
+    .phase-card { height: 100%; min-height: 226px; padding: 22px 19px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .phase-card small { color: var(--blue); font-size: 9px; font-weight: 790; letter-spacing: .12em; }
+    .phase-card h3 { margin: 9px 0 12px; color: var(--navy); font-size: 15px; line-height: 1.45; }
+    .phase-card ul { margin: 0; padding-left: 15px; color: var(--muted); font-size: 10px; line-height: 1.9; }
+    .resources { padding: 72px 0; color: #fff; background: linear-gradient(105deg, #0f416c, #125EA0 65%, #1d6fa8); }
+    .resource-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .resource-row h2 { margin: 0 0 8px; font-size: clamp(25px, 3.2vw, 38px); letter-spacing: -.035em; }
+    .resource-row p { max-width: 640px; margin: 0; color: #d0e5f1; font-size: 12px; line-height: 1.75; }
+    .resource-row .button { flex: 0 0 auto; color: #0c4776; background: #fff; box-shadow: 0 8px 24px rgba(2,29,51,.18); }
+    .resource-row .button:hover { background: #e9f4fa; }
+    footer { padding: 31px 0 27px; color: #8a9aa6; background: #071a2a; }
+    .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(209,229,240,.13); }
+    .footer-brand { display: flex; gap: 11px; align-items: center; }
+    .footer-brand img { width: 34px; height: 34px; filter: brightness(0) invert(1); opacity: .9; }
+    .footer-brand strong { display: block; color: #f0f7fa; font-size: 13px; letter-spacing: .08em; }
+    .footer-brand small { display: block; margin-top: 4px; color: #7994a7; font-size: 8px; letter-spacing: .12em; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 18px; color: #b2c2cc; font-size: 10px; }
+    .footer-nav a:hover { color: #fff; }
+    .footer-note { max-width: 820px; margin: 19px 0 0; color: #8196a5; font-size: 9px; line-height: 1.85; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 16px; margin-top: 21px; color: #718695; font-size: 9px; }
+    :focus-visible { outline: 3px solid #66b5e1; outline-offset: 3px; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (max-width: 990px) {
+      .hero-grid { grid-template-columns: minmax(0,1fr) minmax(330px,.8fr); gap: 20px; }
+      .hero-visual { min-height: 390px; }
+      .visual-orbit { width: 330px; height: 330px; }
+      .core-card { width: 255px; padding: 26px; }
+      .label-b { right: -4px; }
+      .pain-grid { grid-template-columns: repeat(2,1fr); }
+      .architecture-flow { grid-template-columns: repeat(2,1fr); }
+      .layer:nth-child(2)::after { display: none; }
+      .governance-grid { grid-template-columns: 1fr; }
+      .roadmap-list { grid-template-columns: repeat(2,1fr); }
+      .roadmap-list::before { display: none; }
+      .phase { padding-top: 26px; }
+      .phase::before { top: 6px; left: 18px; }
+    }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, var(--max)); }
+      .section { padding: 78px 0; }
+      .topbar { height: 68px; }
+      .brand { min-width: 0; }
+      .brand img { width: 34px; height: 34px; }
+      .brand-name strong { font-size: 15px; }
+      .brand-name small { font-size: 7px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .menu-toggle svg { width: 19px; }
+      .nav-actions .button { display: none; }
+      .nav-links { position: absolute; display: none; flex-direction: column; align-items: stretch; gap: 0; left: 18px; right: 18px; top: 74px; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.98); box-shadow: var(--shadow); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 14px 12px; border-radius: 7px; }
+      .nav-links a:hover { background: #f2f7fa; }
+      .hero { padding: 118px 0 42px; min-height: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 16px; }
+      .hero h1 { font-size: clamp(40px, 11vw, 58px); }
+      .hero-lead { font-size: 14px; }
+      .hero-visual { min-height: 340px; margin-top: 8px; }
+      .visual-orbit { width: 300px; height: 300px; }
+      .core-card { width: 228px; border-radius: 20px; }
+      .core-mark img { width: 86px; height: 86px; }
+      .float-label { padding: 8px 10px; font-size: 9px; }
+      .label-a { left: max(0px, calc(50% - 175px)); top: 28px; }
+      .label-b { right: max(0px, calc(50% - 180px)); top: 95px; }
+      .label-c { left: max(0px, calc(50% - 176px)); bottom: 82px; }
+      .label-d { right: max(0px, calc(50% - 177px)); bottom: 28px; }
+      .stats { margin-top: 22px; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .stat { padding: 17px 10px 12px 0; }
+      .stat + .stat { padding-left: 16px; }
+      .stat:nth-child(3) { border-left: 0; padding-left: 0; border-top: 1px solid #dce6ed; }
+      .stat:nth-child(4) { border-top: 1px solid #dce6ed; }
+      .stat strong { font-size: 22px; }
+      .section-head { margin-bottom: 30px; }
+      .section-head h2 { font-size: clamp(31px, 8.5vw, 43px); }
+      .section-head p { font-size: 14px; }
+      .pain-grid { gap: 10px; }
+      .pain-card { min-height: 215px; padding: 20px 16px; }
+      .card-icon { margin: 17px 0 14px; }
+      .lifecycle-panel { padding: 22px 15px; }
+      .flow-line { top: auto; left: 36px; right: auto; bottom: 64px; width: 1px; height: calc(100% - 130px); background: linear-gradient(#b5ccdb, #5c9bc4, #89c7be); }
+      .lifecycle-steps { grid-template-columns: 1fr; gap: 0; }
+      .life-step { display: grid; grid-template-columns: 42px 1fr; gap: 0 13px; padding: 10px 4px; text-align: left; }
+      .life-node { grid-row: span 2; margin: 0; }
+      .life-step h3 { margin: 1px 0 4px; font-size: 14px; }
+      .life-step p { font-size: 11px; }
+      .lifecycle-note { flex-direction: column; gap: 4px; margin-top: 18px; }
+      .architecture-flow { grid-template-columns: 1fr; gap: 11px; }
+      .layer { min-height: 0; display: grid; grid-template-columns: 44px 1fr; gap: 0 13px; padding: 19px; }
+      .layer .eyebrow { grid-column: 2; }
+      .layer .layer-icon { grid-column: 1; grid-row: 1 / span 3; margin: 0; }
+      .layer h3 { grid-column: 2; margin: 10px 0 5px; }
+      .layer p { grid-column: 2; }
+      .layer:not(:last-child)::after { top: auto; right: calc(50% - 14px); bottom: -17px; transform: rotate(90deg); }
+      .layer:nth-child(2)::after { display: grid; }
+      .security-note { flex-direction: column; align-items: flex-start; gap: 11px; }
+      .asset-board { grid-template-columns: 1fr; }
+      .asset-tabs { display: grid; grid-template-columns: repeat(2,1fr); gap: 7px; padding: 10px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .asset-tab { min-height: 52px; padding: 0 9px; gap: 7px; }
+      .asset-tab span:last-child { font-size: 11px; }
+      .asset-panel { min-height: 295px; padding: 25px 21px; }
+      .token-topline { align-items: flex-start; flex-direction: column; gap: 16px; padding: 20px; }
+      .token-supply { text-align: left; }
+      .allocation { padding: 20px 17px; }
+      .allocation-list { grid-template-columns: 1fr; }
+      .allocation-row:nth-last-child(-n+1) { border-bottom: 1px solid #edf1f4; }
+      .allocation-row:last-child { border-bottom: 0; }
+      .staking-grid { grid-template-columns: 1fr; gap: 10px; }
+      .staking-card { padding: 19px; }
+      .role-list { grid-template-columns: 1fr; }
+      .gov-card { padding: 22px 18px; }
+      .roadmap-list { grid-template-columns: 1fr; gap: 10px; }
+      .phase { padding: 0 0 0 28px; }
+      .phase::before { top: 21px; left: 4px; }
+      .phase-card { min-height: 0; padding: 18px; }
+      .resource-row { align-items: flex-start; flex-direction: column; }
+      footer { padding-top: 25px; }
+      .footer-top, .footer-bottom { flex-direction: column; }
+      .footer-nav { gap: 15px; }
+    }
+    @media (max-width: 390px) {
+      .hero-buttons .button { width: 100%; }
+      .hero-meta { flex-wrap: wrap; row-gap: 9px; }
+      .hero-meta span + span::before { display: none; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .pain-card { min-height: 0; }
+      .asset-tab { align-items: flex-start; flex-direction: column; justify-content: center; gap: 3px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="ACP 首页">
+        <img src="/assets/acp-mark.svg" alt="ACP 几何标志">
+        <span class="brand-name"><strong>ACP</strong><small>ADVANCED COMPOSITES PROTOCOL</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="主导航">
+        <a href="#protocol">协议架构</a>
+        <a href="#assets">RWA 资产</a>
+        <a href="#tokenomics">代币经济</a>
+        <a href="#governance">DAO 治理</a>
+        <a href="#roadmap">路线图</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button-primary button-small" href="/assets/ACP_Whitepaper_V1.1.pdf" target="_blank" rel="noopener">白皮书 <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">REAL-WORLD ASSETS × DECENTRALIZED INNOVATION</div>
+            <h1>让先进复合材料的<br><span>每一段生命周期</span><br>都有迹可循。</h1>
+            <p class="hero-lead">从原材料溯源，到构件制造、维修服务与科研成果转化，ACP 将实体产业流程连接为可验证、可协同的链上协议网络。</p>
+            <div class="hero-buttons">
+              <a class="button button-primary" href="/assets/ACP_Whitepaper_V1.1.pdf" target="_blank" rel="noopener">阅读白皮书 <span aria-hidden="true">↗</span></a>
+              <a class="button button-ghost" href="#protocol">探索协议 <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-meta"><span><i></i>北京研发中心</span><span>开江生产基地</span><span>ACP 治理与效用代币</span></div>
+          </div>
+          <div class="hero-visual" aria-label="复合材料从实体数据到链上应用的示意图">
+            <div class="visual-orbit"><i class="orbit-dot one"></i><i class="orbit-dot two"></i><i class="orbit-dot three"></i><i class="orbit-dot four"></i></div>
+            <div class="float-label label-a"><b>01</b>可信溯源</div>
+            <div class="float-label label-b"><b>02</b>RWA 映射</div>
+            <div class="float-label label-c"><b>03</b>科研协同</div>
+            <div class="float-label label-d"><b>04</b>DAO 治理</div>
+            <div class="core-card">
+              <div class="core-top"><span>ACP / ACP</span><span>PROTOCOL 01</span></div>
+              <div class="core-mark"><img src="/assets/acp-mark.svg" alt=""></div>
+              <div class="core-bottom"><div><strong>ACP</strong><small>ADVANCED COMPOSITES</small></div><span class="core-index">RWA · LIFECYCLE</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="stats" aria-label="协议概览">
+          <div class="stats-grid">
+            <div class="stat"><strong>1B</strong><span>ACP 固定总供应量</span></div>
+            <div class="stat"><strong>4 层</strong><span>协议技术架构</span></div>
+            <div class="stat"><strong>4 类</strong><span>现实资产映射方向</span></div>
+            <div class="stat"><strong>36+ 月</strong><span>分阶段生态建设规划</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pain" id="thesis">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">WHY ACP</div>
+          <h2>把产业协作中的<br><span class="text-blue">断点，变成可验证的连接。</span></h2>
+          <p>先进复合材料贯穿研发、生产、使用和维修。ACP 以实体业务为起点，针对全生命周期中的信息断层、资产流动性和跨机构协作问题，设计可追溯、可确权、可协作的协议流程。</p>
+        </div>
+        <div class="pain-grid">
+          <article class="pain-card reveal"><span class="card-number">01 / PROVENANCE</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 19 6v5c0 4.7-3 8-7 10-4-2-7-5.3-7-10V6l7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>溯源与质量确权</h3><p>原材料批次、构件工序、检测和维修记录分散，质量档案难以连续核验。</p></article>
+          <article class="pain-card reveal"><span class="card-number">02 / ASSET ACCESS</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></div><h3>高价值资产难流转</h3><p>构件、维修服务与技术成果的权益表达缺少通用映射，影响共享与协作。</p></article>
+          <article class="pain-card reveal"><span class="card-number">03 / CAPACITY</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5M8 10h.01M16 10h.01"/></svg></div><h3>产能与需求错配</h3><p>研发、制造与装备用户之间的信息孤岛，使试制和生产资源难以及时匹配。</p></article>
+          <article class="pain-card reveal"><span class="card-number">04 / COLLABORATION</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.8 20c.4-3.4 2.2-5.2 5.2-5.2s4.8 1.8 5.2 5.2M14 15.2c3.7-.5 6.1 1.1 6.9 4.8"/></svg></div><h3>科研协作与分配</h3><p>多方联合研发的贡献记录和收益分配依赖线下协商，成果转化链路较长。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lifecycle" id="lifecycle">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">ONE MATERIAL · FULL LIFECYCLE</div>
+          <h2>从一批原料，<span class="text-blue">到持续演进的资产档案。</span></h2>
+          <p>链上记录关键状态与数据指纹，实体核验、物流、交付和服务仍在线下按业务流程完成。</p>
+        </div>
+        <div class="lifecycle-panel reveal">
+          <div class="flow-line" aria-hidden="true"></div>
+          <div class="lifecycle-steps">
+            <article class="life-step"><span class="life-node">01</span><h3>原料与入库</h3><p>碳纤维、树脂等批次生成唯一标识，关键流转记录留痕。</p></article>
+            <article class="life-step"><span class="life-node">02</span><h3>研发与制造</h3><p>关联工序、检测报告和构件状态，构建连续质量档案。</p></article>
+            <article class="life-step"><span class="life-node">03</span><h3>服役与维修</h3><p>维修工单接续构件档案，服务凭证按约定流程核销。</p></article>
+            <article class="life-step"><span class="life-node">04</span><h3>技术成果转化</h3><p>记录研发贡献与成果权益，支持协同项目的规则化分配。</p></article>
+          </div>
+          <div class="lifecycle-note"><b>数据边界</b><span>涉密业务原始数据保留在线下安全系统；协议侧仅保存经授权的哈希摘要与必要状态信息。涉密资产不发行可流通 RWA 凭证。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture" id="protocol">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">PROTOCOL ARCHITECTURE</div>
+          <h2>实体流程与链上协作，<br>由四层架构串联。</h2>
+          <p>ACP 将实体感知、链下存证网关、区块链协议与应用交互分层设计，使资产核验、数据保护和协议治理各有边界。</p>
+        </div>
+        <div class="architecture-flow reveal">
+          <article class="layer"><div class="eyebrow">LAYER 01</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5"/></svg></div><h3>实体感知层</h3><p>研发、生产、检测、仓储与维修等线下业务系统，保留原始记录。</p></article>
+          <article class="layer"><div class="eyebrow">LAYER 02</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v5.5c0 4 3 7.5 7.5 9.5 4.5-2 7.5-5.5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>ACP-Gateway</h3><p>计算数据哈希、校验签名、核验 RWA 资产并同步订单和维修工单状态。</p></article>
+          <article class="layer"><div class="eyebrow">LAYER 03</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m8 9.8 4-2.3 4 2.3v4.5l-4 2.3-4-2.3V9.8Z"/></svg></div><h3>区块链协议层</h3><p>联盟链承担受控业务存证；公链侧承载 RWA 凭证、治理与生态协同。</p></article>
+          <article class="layer"><div class="eyebrow">LAYER 04</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 8h8M8 12h5M8 16h8"/></svg></div><h3>应用交互层</h3><p>面向产业方、装备用户、DAO 成员和资产参与者提供对应业务入口。</p></article>
+        </div>
+        <div class="security-note reveal"><div><strong>链上可验证，线下可核验</strong><p>RWA 铸造须经过实体资产核验和至少两位授权管理人共同签名。实物交付、物流、验收和合规交易仍按线下合同执行。</p></div><span class="security-badge">DUAL-SIGNATURE REVIEW</span></div>
+      </div>
+    </section>
+
+    <section class="section assets" id="assets">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">RWA MAPPING</div>
+          <h2>让现实资产的权益，<br><span class="text-blue">拥有清晰的链上表达。</span></h2>
+          <p>ACP 将 RWA 定义为权益、服务或收益凭证；每一类映射都以线下核验和明确的履约边界为基础。</p>
+        </div>
+        <div class="asset-board reveal">
+          <div class="asset-tabs" role="tablist" aria-label="RWA 资产类别">
+            <button class="asset-tab" role="tab" id="tab-component" aria-selected="true" aria-controls="asset-panel" data-key="component"><span class="tab-no">01</span><span>构件资产 RWA</span></button>
+            <button class="asset-tab" role="tab" id="tab-service" aria-selected="false" aria-controls="asset-panel" data-key="service" tabindex="-1"><span class="tab-no">02</span><span>维修服务 RWA</span></button>
+            <button class="asset-tab" role="tab" id="tab-patent" aria-selected="false" aria-controls="asset-panel" data-key="patent" tabindex="-1"><span class="tab-no">03</span><span>专利技术 RWA</span></button>
+            <button class="asset-tab" role="tab" id="tab-capacity" aria-selected="false" aria-controls="asset-panel" data-key="capacity" tabindex="-1"><span class="tab-no">04</span><span>产能 RWA</span></button>
+          </div>
+          <div class="asset-panel" id="asset-panel" role="tabpanel" aria-labelledby="tab-component" tabindex="0">
+            <div class="eyebrow" id="asset-eyebrow">PHYSICAL COMPONENTS</div>
+            <h3 id="asset-title">构件资产 RWA</h3>
+            <p id="asset-copy">锚定高性能复合材料成品构件与备件权益，关联构件唯一标识、质量检测摘要及完整生命周期档案，支持后续资产流转和保险核验。</p>
+            <div class="asset-tags" id="asset-tags"><span>唯一资产标识</span><span>生命周期档案</span><span>质量核验</span></div>
+            <p class="asset-footnote">涉密相关实体资产不铸造可流通 RWA，仅按授权范围进行哈希存证。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tokenomics" id="tokenomics">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">TOKENOMICS · ACP</div>
+          <h2>用单一代币，<br><span class="text-blue">连接效用、激励与治理。</span></h2>
+          <p>ACP 用于协议治理、生态参与及协议层手续费消耗。质押和激励机制围绕链上业务设计，与实体企业线下经营收益隔离。</p>
+        </div>
+        <div class="token-topline reveal"><div><small>GOVERNANCE & UTILITY TOKEN</small><strong>ACP</strong></div><div class="token-supply"><small>固定总供应量 · 永不增发</small><strong>1,000,000,000</strong></div></div>
+        <div class="allocation reveal">
+          <h3>代币分配</h3>
+          <div class="stacked-bar" role="img" aria-label="代币分配：实体产业底座基金30%，DAO生态国库30%，技术研发与协议开发团队15%，生态社区与贡献激励20%，初始流动性储备5%"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="allocation-list">
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#125EA0"></i>实体产业底座基金</div><small>4 年线性解锁，设 12 个月锁仓期；用于技术升级与 RWA 底层资产建设。</small></div><span class="allocation-percent">30%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#2d82b9"></i>DAO 生态国库</div><small>5 年线性解锁；由 DAO 提案支配，用于科研众筹、生态与开发者激励。</small></div><span class="allocation-percent">30%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#64a9cf"></i>技术研发与协议开发</div><small>3 年线性解锁，设 12 个月锁仓期。</small></div><span class="allocation-percent">15%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#72bdb4"></i>生态社区与贡献激励</div><small>按贡献逐步释放，不一次性释放。</small></div><span class="allocation-percent">20%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#a6cf9e"></i>初始流动性储备</div><small>50% 上线释放，剩余 50% 分 2 年解锁。</small></div><span class="allocation-percent">5%</span></div>
+          </div>
+        </div>
+        <div class="staking-grid">
+          <article class="staking-card reveal"><small>01 / GOVERNANCE</small><h3>质押治理 · veACP</h3><p>锁定 ACP 获得治理凭证，投票权重依据质押额度与期限计算，白皮书规划最高可提升至 1—3 倍。</p></article>
+          <article class="staking-card reveal"><small>02 / RWA POOL</small><h3>RWA 收益池</h3><p>质押参与链上可分配的维修服务履约手续费与专利技术授权分润，实际分配以对应业务和治理规则为准。</p></article>
+          <article class="staking-card reveal"><small>03 / LIQUIDITY</small><h3>流动性参与</h3><p>为 ACP / 稳定币交易对提供流动性，可按协议规则获得交易手续费分成和生态激励。</p></article>
+        </div>
+        <p class="token-note reveal">协议激励来自链上手续费、DAO 国库预算与流动性激励，不承诺固定收益率。实体企业线下经营利润不直接分配给代币持有人；实体商品采购仍通过线下合同与法币结算。</p>
+      </div>
+    </section>
+
+    <section class="section governance" id="governance">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">ACP-DAO</div>
+          <h2>让产业知识，<br><span class="text-blue">参与协议的共同治理。</span></h2>
+          <p>ACP-DAO 采用混合治理：社区负责生态与协议提案，实体项目方守住资产真实性、保密和重大产能决策边界。</p>
+        </div>
+        <div class="governance-grid">
+          <article class="gov-card reveal"><h3>多元成员协同</h3><p>治理权重综合质押 ACP 与科研贡献，推动产业经验、技术成果与生态参与进入共同决策。</p><div class="role-list"><div class="role"><strong>核心实体理事</strong><span>核验实体资产与涉密风险；对高风险事项保留否决权。</span></div><div class="role"><strong>科研机构成员</strong><span>提出研发方向、输出工艺与专利，参与协同研发。</span></div><div class="role"><strong>产业合作方</strong><span>提出真实需求、订单与应用场景，连接制造与装备用户。</span></div><div class="role"><strong>社区贡献者</strong><span>以质押与生态贡献参与投票、开发和社区建设。</span></div></div></article>
+          <article class="gov-card gov-card-dark reveal"><h3>提案如何生效</h3><p>按事项风险等级设置参与率与审议路径，涉密事项不进入公开 DAO 投票。</p><div class="decision-list"><div class="decision"><b>01</b><span>普通生态、科研与协议参数提案由社区投票决定。</span></div><div class="decision"><b>02</b><span>新增 RWA 类别或大额国库支出需要更高参与率，并经过实体理事审查。</span></div><div class="decision"><b>03</b><span>重大产能投资及涉密相关事项依实体审批流程处理。</span></div><div class="decision"><b>04</b><span>DAO 国库支出用于协议生态；不替代实体基地的日常经营资金。</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">ROADMAP</div>
+          <h2>从实体落地开始，<br><span class="text-blue">逐步扩展协同网络。</span></h2>
+          <p>路线图围绕实体能力、链上存证、科研协作和制造网络逐段推进。各阶段以合规、审计与实际业务验证为前提。</p>
+        </div>
+        <div class="roadmap-list">
+          <article class="phase reveal"><div class="phase-card"><small>PHASE 01 · 0—12 MONTHS</small><h3>实体落地与链上存证</h3><ul><li>建设生产基地并推进相关资质</li><li>部署网关、溯源和存证合约</li><li>完成首批非涉密 RWA 映射</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small>PHASE 02 · 12—24 MONTHS</small><h3>DAO 协同与 RWA 拓展</h3><ul><li>启动 DAO 协同研发项目</li><li>拓展专利技术与产能 RWA</li><li>连接高校、研究机构与产业客户</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small>PHASE 03 · 24—36 MONTHS</small><h3>去中心化制造网络</h3><ul><li>接入外部合规生产基地</li><li>推进跨链互通与标准化</li><li>扩展跨机构科研协作</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small>PHASE 04 · 36+ MONTHS</small><h3>成熟生态</h3><ul><li>完善全生命周期资产标准</li><li>迭代链上协同基础设施</li><li>持续连接全球产业伙伴</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources">
+      <div class="wrap resource-row reveal">
+        <div><h2>从白皮书，开始了解 ACP。</h2><p>查看项目愿景、ACP 协议设计、RWA 映射机制、代币模型与路线图。</p></div>
+        <a class="button" href="/assets/ACP_Whitepaper_V1.1.pdf" download>下载白皮书 <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="footer-brand" href="#home"><img src="/assets/acp-mark.svg" alt=""><span><strong>ACP</strong><small>ADVANCED COMPOSITES PROTOCOL</small></span></a>
+        <nav class="footer-nav" aria-label="页脚导航"><a href="#protocol">协议架构</a><a href="#assets">RWA 资产</a><a href="#tokenomics">代币经济</a><a href="#governance">DAO 治理</a><a href="/assets/ACP_Whitepaper_V1.1.pdf" target="_blank" rel="noopener">白皮书</a></nav>
+      </div>
+      <p class="footer-note">ACP 为协议治理与效用代币，不代表实体公司股权，不构成固定收益承诺。RWA 凭证不等同于实物本身；实物交易、交付、物流和验收按适用的线下合同与流程执行。网站内容依据项目白皮书 V1.1 整理，具体业务与治理机制以正式协议、合约及后续公告为准。</p>
+      <div class="footer-bottom"><span>© <span id="year"></span> ACP · Advanced Composites Protocol</span><span>Built around traceability, verifiable assets & collaborative research.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const topbar = document.getElementById("topbar");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const setMenu = (open) => {
+      navLinks.classList.toggle("open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "关闭导航菜单" : "打开导航菜单");
+    };
+    menuToggle.addEventListener("click", () => setMenu(menuToggle.getAttribute("aria-expanded") !== "true"));
+    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+    window.addEventListener("scroll", () => topbar.classList.toggle("scrolled", window.scrollY > 8), { passive: true });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const assetData = {
+      component: { eyebrow: "PHYSICAL COMPONENTS", title: "构件资产 RWA", copy: "锚定高性能复合材料成品构件与备件权益，关联构件唯一标识、质量检测摘要及完整生命周期档案，支持后续资产流转和保险核验。", tags: ["唯一资产标识", "生命周期档案", "质量核验"] },
+      service: { eyebrow: "REPAIR SERVICES", title: "维修服务 RWA", copy: "以标准化内场或外场维修服务包为锚定对象。装备用户发起工单后，按约定调度服务并记录履约过程，服务完成后核销对应凭证。", tags: ["标准化服务包", "工单状态同步", "完成后核销"] },
+      patent: { eyebrow: "IP & RESEARCH", title: "专利技术 RWA", copy: "围绕新型复合材料工艺、修理技术专利与科研成果建立权益映射，支持 DAO 协同研发，并依据线下协议记录链上可分配部分。", tags: ["技术成果确权", "协同研发", "规则化分账"] },
+      capacity: { eyebrow: "MANUFACTURING CAPACITY", title: "产能 RWA", copy: "将研发试制与生产制造的可用产能额度形成可调用的配额表达，用于供需撮合，逐步改善闲置产能与临时需求之间的错配。", tags: ["试制能力", "产能配额", "供需撮合"] }
+    };
+    const tabs = [...document.querySelectorAll(".asset-tab")];
+    const panel = document.getElementById("asset-panel");
+    const renderAsset = (key) => {
+      const item = assetData[key];
+      const activeTab = tabs.find((tab) => tab.dataset.key === key);
+      tabs.forEach((tab) => {
+        const active = tab === activeTab;
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+      });
+      panel.setAttribute("aria-labelledby", activeTab.id);
+      document.getElementById("asset-eyebrow").textContent = item.eyebrow;
+      document.getElementById("asset-title").textContent = item.title;
+      document.getElementById("asset-copy").textContent = item.copy;
+      document.getElementById("asset-tags").replaceChildren(...item.tags.map((label) => {
+        const tag = document.createElement("span"); tag.textContent = label; return tag;
+      }));
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => renderAsset(tab.dataset.key));
+      tab.addEventListener("keydown", (event) => {
+        if (!["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"].includes(event.key)) return;
+        event.preventDefault();
+        const delta = ["ArrowDown", "ArrowRight"].includes(event.key) ? 1 : -1;
+        const next = tabs[(index + delta + tabs.length) % tabs.length];
+        renderAsset(next.dataset.key); next.focus();
+      });
+    });
+
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible"); observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.08 });
+      revealItems.forEach((item) => observer.observe(item));
+    } else revealItems.forEach((item) => item.classList.add("visible"));
+  </script>
+</body>
+</html>
