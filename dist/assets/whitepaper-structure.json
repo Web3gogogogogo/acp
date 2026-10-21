@@ -1,0 +1,951 @@
+[
+  {
+    "type": "heading",
+    "key": "w001",
+    "number": "1",
+    "id": "chapter-1",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w002"
+  },
+  {
+    "type": "p",
+    "key": "w003"
+  },
+  {
+    "type": "p",
+    "key": "w004"
+  },
+  {
+    "type": "heading",
+    "key": "w005",
+    "number": "2",
+    "id": "chapter-2",
+    "level": 2
+  },
+  {
+    "type": "heading",
+    "key": "w006",
+    "number": "2.1",
+    "id": "chapter-2-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w007"
+  },
+  {
+    "type": "heading",
+    "key": "w008",
+    "number": "2.2",
+    "id": "chapter-2-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w009"
+  },
+  {
+    "type": "p",
+    "key": "w010"
+  },
+  {
+    "type": "p",
+    "key": "w011"
+  },
+  {
+    "type": "p",
+    "key": "w012"
+  },
+  {
+    "type": "p",
+    "key": "w013"
+  },
+  {
+    "type": "p",
+    "key": "w014"
+  },
+  {
+    "type": "heading",
+    "key": "w015",
+    "number": "2.3",
+    "id": "chapter-2-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w016"
+  },
+  {
+    "type": "heading",
+    "key": "w017",
+    "number": "3",
+    "id": "chapter-3",
+    "level": 2
+  },
+  {
+    "type": "heading",
+    "key": "w018",
+    "number": "3.1",
+    "id": "chapter-3-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w019"
+  },
+  {
+    "type": "heading",
+    "key": "w020",
+    "number": "3.2",
+    "id": "chapter-3-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w021"
+  },
+  {
+    "type": "heading",
+    "key": "w022",
+    "number": "3.3",
+    "id": "chapter-3-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w023"
+  },
+  {
+    "type": "p",
+    "key": "w024"
+  },
+  {
+    "type": "p",
+    "key": "w025"
+  },
+  {
+    "type": "heading",
+    "key": "w026",
+    "number": "3.4",
+    "id": "chapter-3-4",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w027"
+  },
+  {
+    "type": "p",
+    "key": "w028"
+  },
+  {
+    "type": "p",
+    "key": "w029"
+  },
+  {
+    "type": "heading",
+    "key": "w030",
+    "number": "4",
+    "id": "chapter-4",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w031"
+  },
+  {
+    "type": "heading",
+    "key": "w032",
+    "number": "4.1",
+    "id": "chapter-4-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w033"
+  },
+  {
+    "type": "heading",
+    "key": "w034",
+    "number": "4.2",
+    "id": "chapter-4-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w035"
+  },
+  {
+    "type": "p",
+    "key": "w036"
+  },
+  {
+    "type": "p",
+    "key": "w037"
+  },
+  {
+    "type": "p",
+    "key": "w038"
+  },
+  {
+    "type": "heading",
+    "key": "w039",
+    "number": "4.3",
+    "id": "chapter-4-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w040"
+  },
+  {
+    "type": "p",
+    "key": "w041"
+  },
+  {
+    "type": "p",
+    "key": "w042"
+  },
+  {
+    "type": "p",
+    "key": "w043"
+  },
+  {
+    "type": "heading",
+    "key": "w044",
+    "number": "4.4",
+    "id": "chapter-4-4",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w045"
+  },
+  {
+    "type": "heading",
+    "key": "w046",
+    "number": "4.5",
+    "id": "chapter-4-5",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w047"
+  },
+  {
+    "type": "p",
+    "key": "w048"
+  },
+  {
+    "type": "heading",
+    "key": "w049",
+    "number": "5",
+    "id": "chapter-5",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w050"
+  },
+  {
+    "type": "heading",
+    "key": "w051",
+    "number": "5.1",
+    "id": "chapter-5-1",
+    "level": 3
+  },
+  {
+    "type": "heading",
+    "key": "w052",
+    "number": "5.1.1",
+    "id": "chapter-5-1-1",
+    "level": 4
+  },
+  {
+    "type": "p",
+    "key": "w053"
+  },
+  {
+    "type": "heading",
+    "key": "w054",
+    "number": "5.1.2",
+    "id": "chapter-5-1-2",
+    "level": 4
+  },
+  {
+    "type": "p",
+    "key": "w055"
+  },
+  {
+    "type": "p",
+    "key": "w056"
+  },
+  {
+    "type": "heading",
+    "key": "w057",
+    "number": "5.1.3",
+    "id": "chapter-5-1-3",
+    "level": 4
+  },
+  {
+    "type": "p",
+    "key": "w058"
+  },
+  {
+    "type": "p",
+    "key": "w059"
+  },
+  {
+    "type": "p",
+    "key": "w060"
+  },
+  {
+    "type": "p",
+    "key": "w061"
+  },
+  {
+    "type": "p",
+    "key": "w062"
+  },
+  {
+    "type": "p",
+    "key": "w063"
+  },
+  {
+    "type": "p",
+    "key": "w064"
+  },
+  {
+    "type": "p",
+    "key": "w065"
+  },
+  {
+    "type": "p",
+    "key": "w066"
+  },
+  {
+    "type": "heading",
+    "key": "w067",
+    "number": "5.1.4",
+    "id": "chapter-5-1-4",
+    "level": 4
+  },
+  {
+    "type": "p",
+    "key": "w068"
+  },
+  {
+    "type": "heading",
+    "key": "w069",
+    "number": "5.2",
+    "id": "chapter-5-2",
+    "level": 3
+  },
+  {
+    "type": "figure",
+    "key": "w070",
+    "src": "/assets/whitepaper-figure-architecture.png",
+    "description": "f001"
+  },
+  {
+    "type": "p",
+    "key": "w071"
+  },
+  {
+    "type": "p",
+    "key": "w072"
+  },
+  {
+    "type": "p",
+    "key": "w073"
+  },
+  {
+    "type": "p",
+    "key": "w074"
+  },
+  {
+    "type": "heading",
+    "key": "w075",
+    "number": "6",
+    "id": "chapter-6",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w076"
+  },
+  {
+    "type": "heading",
+    "key": "w077",
+    "number": "6.1",
+    "id": "chapter-6-1",
+    "level": 3
+  },
+  {
+    "type": "table",
+    "key": "w078",
+    "rows": [
+      [
+        "w079",
+        "w080",
+        "w081"
+      ],
+      [
+        "w082",
+        "w083",
+        "w084"
+      ],
+      [
+        "w085",
+        "w086",
+        "w087"
+      ],
+      [
+        "w088",
+        "w089",
+        "w090"
+      ],
+      [
+        "w091",
+        "w092",
+        "w093"
+      ]
+    ]
+  },
+  {
+    "type": "heading",
+    "key": "w094",
+    "number": "6.2",
+    "id": "chapter-6-2",
+    "level": 3
+  },
+  {
+    "type": "figure",
+    "key": "w095",
+    "src": "/assets/whitepaper-figure-lifecycle.png",
+    "description": "f002"
+  },
+  {
+    "type": "p",
+    "key": "w096"
+  },
+  {
+    "type": "p",
+    "key": "w097"
+  },
+  {
+    "type": "p",
+    "key": "w098"
+  },
+  {
+    "type": "p",
+    "key": "w099"
+  },
+  {
+    "type": "p",
+    "key": "w100"
+  },
+  {
+    "type": "p",
+    "key": "w101"
+  },
+  {
+    "type": "heading",
+    "key": "w102",
+    "number": "7",
+    "id": "chapter-7",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w103"
+  },
+  {
+    "type": "heading",
+    "key": "w104",
+    "number": "7.1",
+    "id": "chapter-7-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w105"
+  },
+  {
+    "type": "p",
+    "key": "w106"
+  },
+  {
+    "type": "p",
+    "key": "w107"
+  },
+  {
+    "type": "p",
+    "key": "w108"
+  },
+  {
+    "type": "p",
+    "key": "w109"
+  },
+  {
+    "type": "heading",
+    "key": "w110",
+    "number": "7.2",
+    "id": "chapter-7-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w111"
+  },
+  {
+    "type": "table",
+    "key": "w112",
+    "rows": [
+      [
+        "w113",
+        "w114",
+        "w115",
+        "w116"
+      ],
+      [
+        "w117",
+        "w118",
+        "w119",
+        "w120"
+      ],
+      [
+        "w121",
+        "w122",
+        "w123",
+        "w124"
+      ],
+      [
+        "w125",
+        "w126",
+        "w127",
+        "w128"
+      ],
+      [
+        "w129",
+        "w130",
+        "w131",
+        "w132"
+      ],
+      [
+        "w133",
+        "w134",
+        "w135",
+        "w136"
+      ]
+    ]
+  },
+  {
+    "type": "heading",
+    "key": "w137",
+    "number": "7.3",
+    "id": "chapter-7-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w138"
+  },
+  {
+    "type": "p",
+    "key": "w139"
+  },
+  {
+    "type": "p",
+    "key": "w140"
+  },
+  {
+    "type": "heading",
+    "key": "w141",
+    "number": "7.4",
+    "id": "chapter-7-4",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w142"
+  },
+  {
+    "type": "p",
+    "key": "w143"
+  },
+  {
+    "type": "p",
+    "key": "w144"
+  },
+  {
+    "type": "p",
+    "key": "w145"
+  },
+  {
+    "type": "p",
+    "key": "w146"
+  },
+  {
+    "type": "p",
+    "key": "w147"
+  },
+  {
+    "type": "heading",
+    "key": "w148",
+    "number": "7.5",
+    "id": "chapter-7-5",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w149"
+  },
+  {
+    "type": "heading",
+    "key": "w150",
+    "number": "8",
+    "id": "chapter-8",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w151"
+  },
+  {
+    "type": "heading",
+    "key": "w152",
+    "number": "8.1",
+    "id": "chapter-8-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w153"
+  },
+  {
+    "type": "p",
+    "key": "w154"
+  },
+  {
+    "type": "p",
+    "key": "w155"
+  },
+  {
+    "type": "p",
+    "key": "w156"
+  },
+  {
+    "type": "heading",
+    "key": "w157",
+    "number": "8.2",
+    "id": "chapter-8-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w158"
+  },
+  {
+    "type": "p",
+    "key": "w159"
+  },
+  {
+    "type": "p",
+    "key": "w160"
+  },
+  {
+    "type": "p",
+    "key": "w161"
+  },
+  {
+    "type": "p",
+    "key": "w162"
+  },
+  {
+    "type": "heading",
+    "key": "w163",
+    "number": "8.3",
+    "id": "chapter-8-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w164"
+  },
+  {
+    "type": "p",
+    "key": "w165"
+  },
+  {
+    "type": "p",
+    "key": "w166"
+  },
+  {
+    "type": "p",
+    "key": "w167"
+  },
+  {
+    "type": "heading",
+    "key": "w168",
+    "number": "8.4",
+    "id": "chapter-8-4",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w169"
+  },
+  {
+    "type": "heading",
+    "key": "w170",
+    "number": "9",
+    "id": "chapter-9",
+    "level": 2
+  },
+  {
+    "type": "heading",
+    "key": "w171",
+    "number": "9.1",
+    "id": "chapter-9-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w172"
+  },
+  {
+    "type": "heading",
+    "key": "w173",
+    "number": "9.2",
+    "id": "chapter-9-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w174"
+  },
+  {
+    "type": "p",
+    "key": "w175"
+  },
+  {
+    "type": "heading",
+    "key": "w176",
+    "number": "9.3",
+    "id": "chapter-9-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w177"
+  },
+  {
+    "type": "heading",
+    "key": "w178",
+    "number": "9.4",
+    "id": "chapter-9-4",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w179"
+  },
+  {
+    "type": "heading",
+    "key": "w180",
+    "number": "9.5",
+    "id": "chapter-9-5",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w181"
+  },
+  {
+    "type": "p",
+    "key": "w182"
+  },
+  {
+    "type": "heading",
+    "key": "w183",
+    "number": "10",
+    "id": "chapter-10",
+    "level": 2
+  },
+  {
+    "type": "heading",
+    "key": "w184",
+    "number": "10.1",
+    "id": "chapter-10-1",
+    "level": 3
+  },
+  {
+    "type": "table",
+    "key": "w197",
+    "rows": [
+      [
+        "r001",
+        "r002",
+        "r003"
+      ],
+      [
+        "r004",
+        "r005",
+        "r006"
+      ],
+      [
+        "r007",
+        "r008",
+        "r009"
+      ],
+      [
+        "r010",
+        "r011",
+        "r012"
+      ],
+      [
+        "r013",
+        "r014",
+        "r015"
+      ],
+      [
+        "r016",
+        "r017",
+        "r018"
+      ],
+      [
+        "r019",
+        "r020",
+        "r021"
+      ]
+    ]
+  },
+  {
+    "type": "heading",
+    "key": "w198",
+    "number": "10.2",
+    "id": "chapter-10-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w199"
+  },
+  {
+    "type": "p",
+    "key": "w200"
+  },
+  {
+    "type": "p",
+    "key": "w201"
+  },
+  {
+    "type": "p",
+    "key": "w202"
+  },
+  {
+    "type": "p",
+    "key": "w203"
+  },
+  {
+    "type": "heading",
+    "key": "w204",
+    "number": "11",
+    "id": "chapter-11",
+    "level": 2
+  },
+  {
+    "type": "heading",
+    "key": "w205",
+    "number": "11.1",
+    "id": "chapter-11-1",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w206"
+  },
+  {
+    "type": "heading",
+    "key": "w207",
+    "number": "11.2",
+    "id": "chapter-11-2",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w208"
+  },
+  {
+    "type": "heading",
+    "key": "w209",
+    "number": "11.3",
+    "id": "chapter-11-3",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w210"
+  },
+  {
+    "type": "heading",
+    "key": "w211",
+    "number": "11.4",
+    "id": "chapter-11-4",
+    "level": 3
+  },
+  {
+    "type": "p",
+    "key": "w212"
+  },
+  {
+    "type": "heading",
+    "key": "w213",
+    "number": "12",
+    "id": "chapter-12",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w214"
+  },
+  {
+    "type": "p",
+    "key": "w215"
+  },
+  {
+    "type": "p",
+    "key": "w216"
+  },
+  {
+    "type": "p",
+    "key": "w217"
+  },
+  {
+    "type": "p",
+    "key": "w218"
+  },
+  {
+    "type": "heading",
+    "key": "w219",
+    "number": "13",
+    "id": "chapter-13",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "key": "w220"
+  },
+  {
+    "type": "p",
+    "key": "w221"
+  },
+  {
+    "type": "p",
+    "key": "w222"
+  }
+]

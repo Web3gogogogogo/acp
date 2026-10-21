@@ -1,0 +1,7 @@
+{
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/whitepaper", "destination": "/index.html" },
+    { "source": "/whitepaper/", "destination": "/index.html" }
+  ]
+}

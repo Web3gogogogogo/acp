@@ -2,5 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "buildCommand": "",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/whitepaper", "destination": "/index.html" },
+    { "source": "/whitepaper/", "destination": "/index.html" }
+  ]
 }

@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#125EA0">
-  <meta name="description" content="ACP / Advanced Composites Protocol：以链上可信溯源、RWA 权益映射与协同治理，连接先进复合材料的研发、制造与服务。">
+  <meta data-i18n-content="h177" name="description" content="ACP / Advanced Composites Protocol：以鏈上可信溯源、RWA 權益映射與協同治理，連接先進複合材料的研發、製造與服務。">
   <meta property="og:title" content="ACP — Advanced Composites Protocol">
-  <meta property="og:description" content="让先进复合材料的每一段生命周期，都有迹可循。">
+  <meta data-i18n-content="h178" property="og:description" content="讓先進複合材料的每一段生命週期，都有跡可循。">
   <meta property="og:type" content="website">
-  <title>ACP — Advanced Composites Protocol</title>
+  <title>ACP — 先進複合材料協議</title>
   <style>
     :root {
       color-scheme: light;
@@ -26,7 +26,7 @@
       --radius: 18px;
       --shadow: 0 18px 50px rgba(10, 35, 56, .10);
       --max: 1180px;
-      --sans: Inter, "Aptos", "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --sans: Inter, "Aptos", "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 88px; }
@@ -342,25 +342,25 @@
       .reveal { opacity: 1; transform: none; }
     }
   </style>
-</head>
-<body>
+<link href="/assets/multilingual.css" rel="stylesheet"></head>
+<body><noscript><div class="wrap" style="padding:100px 0 20px">啟用 JavaScript 可切換語言及閱讀網頁版白皮書。<a href="/assets/ACP_Whitepaper_V1.1.pdf">下載原版 PDF（簡體中文 · V1.1）</a></div></noscript>
   <header class="topbar" id="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="ACP 首页">
-        <img src="/assets/acp-mark.svg" alt="ACP 几何标志">
+      <a data-i18n-aria-label="h168" class="brand" href="/#home" aria-label="ACP 首頁">
+        <img data-i18n-alt="h169" src="/assets/acp-mark.svg" alt="ACP 幾何標誌">
         <span class="brand-name"><strong>ACP</strong><small>ADVANCED COMPOSITES PROTOCOL</small></span>
       </a>
-      <nav class="nav-links" id="navLinks" aria-label="主导航">
-        <a href="#protocol">协议架构</a>
-        <a href="#assets">RWA 资产</a>
-        <a href="#tokenomics">代币经济</a>
-        <a href="#governance">DAO 治理</a>
-        <a href="#roadmap">路线图</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="button button-primary button-small" href="/assets/ACP_Whitepaper_V1.1.pdf" target="_blank" rel="noopener">白皮书 <span aria-hidden="true">↗</span></a>
-        <button class="menu-toggle" id="menuToggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navLinks">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <nav data-i18n-aria-label="h170" class="nav-links" id="navLinks" aria-label="主導航">
+        <a data-i18n="h001" href="/#protocol">協議架構</a>
+        <a data-i18n="h002" href="/#assets">RWA 資產</a>
+        <a data-i18n="h003" href="/#tokenomics">代幣經濟</a>
+        <a data-i18n="h004" href="/#governance">DAO 治理</a>
+        <a data-i18n="h005" href="/#roadmap">路線圖</a>
+      <a data-i18n="h006" class="nav-paper" href="/whitepaper">白皮書</a></nav>
+      <div class="nav-actions"><div class="language-picker" id="language-picker"><button id="language-button" class="language-button" type="button" aria-label="語言" aria-haspopup="menu" aria-expanded="false" aria-controls="language-options"><span aria-hidden="true">◎</span><bdi id="language-code">繁</bdi><span aria-hidden="true">⌄</span></button><div id="language-options" class="language-options" role="menu" aria-label="Language" hidden></div></div>
+        <a class="button button-primary button-small" href="/whitepaper"><span data-i18n="h006">白皮書</span><span aria-hidden="true">↗</span></a>
+        <button data-i18n-aria-label="h171" class="menu-toggle" id="menuToggle" type="button" aria-label="打開導航菜單" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </div>
@@ -371,34 +371,34 @@
       <div class="wrap">
         <div class="hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow">REAL-WORLD ASSETS × DECENTRALIZED INNOVATION</div>
-            <h1>让先进复合材料的<br><span>每一段生命周期</span><br>都有迹可循。</h1>
-            <p class="hero-lead">从原材料溯源，到构件制造、维修服务与科研成果转化，ACP 将实体产业流程连接为可验证、可协同的链上协议网络。</p>
+            <div data-i18n="h007" class="eyebrow">現實世界資產 × 去中心化創新</div>
+            <h1><span data-i18n="h008">讓先進複合材料的</span><br> <span data-i18n="h009">每一段生命週期</span><br> <span data-i18n="h010">都有跡可循。</span></h1>
+            <p data-i18n="h011" class="hero-lead">從原材料溯源，到構件製造、維修服務與科研成果轉化，ACP 將實體產業流程連接為可驗證、可協同的鏈上協議網絡。</p>
             <div class="hero-buttons">
-              <a class="button button-primary" href="/assets/ACP_Whitepaper_V1.1.pdf" target="_blank" rel="noopener">阅读白皮书 <span aria-hidden="true">↗</span></a>
-              <a class="button button-ghost" href="#protocol">探索协议 <span aria-hidden="true">↓</span></a>
+              <a class="button button-primary" href="/whitepaper"><span data-i18n="h012">閱讀白皮書</span><span aria-hidden="true">↗</span></a>
+              <a class="button button-ghost" href="/#protocol"><span data-i18n="h013">探索協議</span><span aria-hidden="true">↓</span></a>
             </div>
-            <div class="hero-meta"><span><i></i>北京研发中心</span><span>开江生产基地</span><span>ACP 治理与效用代币</span></div>
+            <div class="hero-meta"><span><i></i><span data-i18n="h014">北京研發中心</span></span><span data-i18n="h015">開江生產基地</span><span data-i18n="h016">ACP 治理與效用代幣</span></div>
           </div>
-          <div class="hero-visual" aria-label="复合材料从实体数据到链上应用的示意图">
+          <div data-i18n-aria-label="h172" class="hero-visual" aria-label="複合材料從實體數據到鏈上應用的示意圖">
             <div class="visual-orbit"><i class="orbit-dot one"></i><i class="orbit-dot two"></i><i class="orbit-dot three"></i><i class="orbit-dot four"></i></div>
-            <div class="float-label label-a"><b>01</b>可信溯源</div>
-            <div class="float-label label-b"><b>02</b>RWA 映射</div>
-            <div class="float-label label-c"><b>03</b>科研协同</div>
-            <div class="float-label label-d"><b>04</b>DAO 治理</div>
+            <div class="float-label label-a"><b>01</b><span data-i18n="h017">可信溯源</span></div>
+            <div class="float-label label-b"><b>02</b><span data-i18n="h018">RWA 映射</span></div>
+            <div class="float-label label-c"><b>03</b><span data-i18n="h019">科研協同</span></div>
+            <div class="float-label label-d"><b>04</b><span data-i18n="h004">DAO 治理</span></div>
             <div class="core-card">
-              <div class="core-top"><span>ACP / ACP</span><span>PROTOCOL 01</span></div>
+              <div class="core-top"><span>ACP / ACP</span><span data-i18n="h020">協議 01</span></div>
               <div class="core-mark"><img src="/assets/acp-mark.svg" alt=""></div>
-              <div class="core-bottom"><div><strong>ACP</strong><small>ADVANCED COMPOSITES</small></div><span class="core-index">RWA · LIFECYCLE</span></div>
+              <div class="core-bottom"><div><strong>ACP</strong><small>ADVANCED COMPOSITES</small></div><span data-i18n="h021" class="core-index">RWA · 生命週期</span></div>
             </div>
           </div>
         </div>
-        <div class="stats" aria-label="协议概览">
+        <div data-i18n-aria-label="h173" class="stats" aria-label="協議概覽">
           <div class="stats-grid">
-            <div class="stat"><strong>1B</strong><span>ACP 固定总供应量</span></div>
-            <div class="stat"><strong>4 层</strong><span>协议技术架构</span></div>
-            <div class="stat"><strong>4 类</strong><span>现实资产映射方向</span></div>
-            <div class="stat"><strong>36+ 月</strong><span>分阶段生态建设规划</span></div>
+            <div class="stat"><strong data-i18n="h022">1B</strong><span data-i18n="h023">ACP 固定總供應量</span></div>
+            <div class="stat"><strong data-i18n="h024">4 層</strong><span data-i18n="h025">協議技術架構</span></div>
+            <div class="stat"><strong data-i18n="h026">4 類</strong><span data-i18n="h027">現實資產映射方向</span></div>
+            <div class="stat"><strong data-i18n="h028">36+ 月</strong><span data-i18n="h029">分階段生態建設規劃</span></div>
           </div>
         </div>
       </div>
@@ -407,15 +407,15 @@
     <section class="section pain" id="thesis">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">WHY ACP</div>
-          <h2>把产业协作中的<br><span class="text-blue">断点，变成可验证的连接。</span></h2>
-          <p>先进复合材料贯穿研发、生产、使用和维修。ACP 以实体业务为起点，针对全生命周期中的信息断层、资产流动性和跨机构协作问题，设计可追溯、可确权、可协作的协议流程。</p>
+          <div data-i18n="h030" class="eyebrow">為何選擇 ACP</div>
+          <h2><span data-i18n="h031">把產業協作中的</span><br> <span data-i18n="h032" class="text-blue">斷點，變成可驗證的連接。</span></h2>
+          <p data-i18n="h033">先進複合材料貫穿研發、生產、使用和維修。ACP 以實體業務為起點，針對全生命週期中的信息斷層、資產流動性和跨機構協作問題，設計可追溯、可確權、可協作的協議流程。</p>
         </div>
         <div class="pain-grid">
-          <article class="pain-card reveal"><span class="card-number">01 / PROVENANCE</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 19 6v5c0 4.7-3 8-7 10-4-2-7-5.3-7-10V6l7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>溯源与质量确权</h3><p>原材料批次、构件工序、检测和维修记录分散，质量档案难以连续核验。</p></article>
-          <article class="pain-card reveal"><span class="card-number">02 / ASSET ACCESS</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></div><h3>高价值资产难流转</h3><p>构件、维修服务与技术成果的权益表达缺少通用映射，影响共享与协作。</p></article>
-          <article class="pain-card reveal"><span class="card-number">03 / CAPACITY</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5M8 10h.01M16 10h.01"/></svg></div><h3>产能与需求错配</h3><p>研发、制造与装备用户之间的信息孤岛，使试制和生产资源难以及时匹配。</p></article>
-          <article class="pain-card reveal"><span class="card-number">04 / COLLABORATION</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.8 20c.4-3.4 2.2-5.2 5.2-5.2s4.8 1.8 5.2 5.2M14 15.2c3.7-.5 6.1 1.1 6.9 4.8"/></svg></div><h3>科研协作与分配</h3><p>多方联合研发的贡献记录和收益分配依赖线下协商，成果转化链路较长。</p></article>
+          <article class="pain-card reveal"><span data-i18n="h034" class="card-number">01 / 溯源</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 19 6v5c0 4.7-3 8-7 10-4-2-7-5.3-7-10V6l7-3Z" /><path d="m8.5 12 2.2 2.2 4.8-5" /></svg></div><h3 data-i18n="h035">溯源與質量確權</h3><p data-i18n="h036">原材料批次、構件工序、檢測和維修記錄分散，質量檔案難以連續核驗。</p></article>
+          <article class="pain-card reveal"><span data-i18n="h037" class="card-number">02 / 資產流通</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" /><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21" /></svg></div><h3 data-i18n="h038">高價值資產難流轉</h3><p data-i18n="h039">構件、維修服務與技術成果的權益表達缺少通用映射，影響共享與協作。</p></article>
+          <article class="pain-card reveal"><span data-i18n="h040" class="card-number">03 / 產能</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5M8 10h.01M16 10h.01" /></svg></div><h3 data-i18n="h041">產能與需求錯配</h3><p data-i18n="h042">研發、製造與裝備用戶之間的信息孤島，使試製和生產資源難以及時匹配。</p></article>
+          <article class="pain-card reveal"><span data-i18n="h043" class="card-number">04 / 協作</span><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="3" /><circle cx="17" cy="9" r="2.5" /><path d="M2.8 20c.4-3.4 2.2-5.2 5.2-5.2s4.8 1.8 5.2 5.2M14 15.2c3.7-.5 6.1 1.1 6.9 4.8" /></svg></div><h3 data-i18n="h044">科研協作與分配</h3><p data-i18n="h045">多方聯合研發的貢獻記錄和收益分配依賴線下協商，成果轉化鏈路較長。</p></article>
         </div>
       </div>
     </section>
@@ -423,19 +423,19 @@
     <section class="section lifecycle" id="lifecycle">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">ONE MATERIAL · FULL LIFECYCLE</div>
-          <h2>从一批原料，<span class="text-blue">到持续演进的资产档案。</span></h2>
-          <p>链上记录关键状态与数据指纹，实体核验、物流、交付和服务仍在线下按业务流程完成。</p>
+          <div data-i18n="h046" class="eyebrow">一種材料 · 完整生命週期</div>
+          <h2><span data-i18n="h047">從一批原料，</span> <span data-i18n="h048" class="text-blue">到持續演進的資產檔案。</span></h2>
+          <p data-i18n="h049">鏈上記錄關鍵狀態與數據指紋，實體核驗、物流、交付和服務仍在線下按業務流程完成。</p>
         </div>
         <div class="lifecycle-panel reveal">
           <div class="flow-line" aria-hidden="true"></div>
           <div class="lifecycle-steps">
-            <article class="life-step"><span class="life-node">01</span><h3>原料与入库</h3><p>碳纤维、树脂等批次生成唯一标识，关键流转记录留痕。</p></article>
-            <article class="life-step"><span class="life-node">02</span><h3>研发与制造</h3><p>关联工序、检测报告和构件状态，构建连续质量档案。</p></article>
-            <article class="life-step"><span class="life-node">03</span><h3>服役与维修</h3><p>维修工单接续构件档案，服务凭证按约定流程核销。</p></article>
-            <article class="life-step"><span class="life-node">04</span><h3>技术成果转化</h3><p>记录研发贡献与成果权益，支持协同项目的规则化分配。</p></article>
+            <article class="life-step"><span class="life-node">01</span><h3 data-i18n="h050">原料與入庫</h3><p data-i18n="h051">碳纖維、樹脂等批次生成唯一標識，關鍵流轉記錄留痕。</p></article>
+            <article class="life-step"><span class="life-node">02</span><h3 data-i18n="h052">研發與製造</h3><p data-i18n="h053">關聯工序、檢測報告和構件狀態，構建連續質量檔案。</p></article>
+            <article class="life-step"><span class="life-node">03</span><h3 data-i18n="h054">服役與維修</h3><p data-i18n="h055">維修工單接續構件檔案，服務憑證按約定流程核銷。</p></article>
+            <article class="life-step"><span class="life-node">04</span><h3 data-i18n="h056">技術成果轉化</h3><p data-i18n="h057">記錄研發貢獻與成果權益，支持協同項目的規則化分配。</p></article>
           </div>
-          <div class="lifecycle-note"><b>数据边界</b><span>涉密业务原始数据保留在线下安全系统；协议侧仅保存经授权的哈希摘要与必要状态信息。涉密资产不发行可流通 RWA 凭证。</span></div>
+          <div class="lifecycle-note"><b data-i18n="h058">數據邊界</b><span data-i18n="h059">涉密業務原始數據保留在線下安全系統；協議側僅保存經授權的哈希摘要與必要狀態信息。涉密資產不發行可流通 RWA 憑證。</span></div>
         </div>
       </div>
     </section>
@@ -443,40 +443,40 @@
     <section class="section architecture" id="protocol">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">PROTOCOL ARCHITECTURE</div>
-          <h2>实体流程与链上协作，<br>由四层架构串联。</h2>
-          <p>ACP 将实体感知、链下存证网关、区块链协议与应用交互分层设计，使资产核验、数据保护和协议治理各有边界。</p>
+          <div data-i18n="h060" class="eyebrow">協議架構</div>
+          <h2><span data-i18n="h061">實體流程與鏈上協作，</span><br> <span data-i18n="h062">由四層架構串聯。</span></h2>
+          <p data-i18n="h063">ACP 將實體感知、鏈下存證網關、區塊鏈協議與應用交互分層設計，使資產核驗、數據保護和協議治理各有邊界。</p>
         </div>
         <div class="architecture-flow reveal">
-          <article class="layer"><div class="eyebrow">LAYER 01</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5"/></svg></div><h3>实体感知层</h3><p>研发、生产、检测、仓储与维修等线下业务系统，保留原始记录。</p></article>
-          <article class="layer"><div class="eyebrow">LAYER 02</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v5.5c0 4 3 7.5 7.5 9.5 4.5-2 7.5-5.5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>ACP-Gateway</h3><p>计算数据哈希、校验签名、核验 RWA 资产并同步订单和维修工单状态。</p></article>
-          <article class="layer"><div class="eyebrow">LAYER 03</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m8 9.8 4-2.3 4 2.3v4.5l-4 2.3-4-2.3V9.8Z"/></svg></div><h3>区块链协议层</h3><p>联盟链承担受控业务存证；公链侧承载 RWA 凭证、治理与生态协同。</p></article>
-          <article class="layer"><div class="eyebrow">LAYER 04</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 8h8M8 12h5M8 16h8"/></svg></div><h3>应用交互层</h3><p>面向产业方、装备用户、DAO 成员和资产参与者提供对应业务入口。</p></article>
+          <article class="layer"><div data-i18n="h064" class="eyebrow">第 01 層</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5" /></svg></div><h3 data-i18n="h065">實體感知層</h3><p data-i18n="h066">研發、生產、檢測、倉儲與維修等線下業務系統，保留原始記錄。</p></article>
+          <article class="layer"><div data-i18n="h067" class="eyebrow">第 02 層</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v5.5c0 4 3 7.5 7.5 9.5 4.5-2 7.5-5.5 7.5-9.5V6L12 3Z" /><path d="m8.5 12 2.2 2.2 4.8-5" /></svg></div><h3>ACP-Gateway</h3><p data-i18n="h068">計算數據哈希、校驗簽名、核驗 RWA 資產並同步訂單和維修工單狀態。</p></article>
+          <article class="layer"><div data-i18n="h069" class="eyebrow">第 03 層</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z" /><path d="m8 9.8 4-2.3 4 2.3v4.5l-4 2.3-4-2.3V9.8Z" /></svg></div><h3 data-i18n="h070">區塊鏈協議層</h3><p data-i18n="h071">聯盟鏈承擔受控業務存證；公鏈側承載 RWA 憑證、治理與生態協同。</p></article>
+          <article class="layer"><div data-i18n="h072" class="eyebrow">第 04 層</div><div class="layer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M8 8h8M8 12h5M8 16h8" /></svg></div><h3 data-i18n="h073">應用交互層</h3><p data-i18n="h074">面向產業方、裝備用戶、DAO 成員和資產參與者提供對應業務入口。</p></article>
         </div>
-        <div class="security-note reveal"><div><strong>链上可验证，线下可核验</strong><p>RWA 铸造须经过实体资产核验和至少两位授权管理人共同签名。实物交付、物流、验收和合规交易仍按线下合同执行。</p></div><span class="security-badge">DUAL-SIGNATURE REVIEW</span></div>
+        <div class="security-note reveal"><div><strong data-i18n="h075">鏈上可驗證，線下可核驗</strong><p data-i18n="h076">RWA 鑄造須經過實體資產核驗和至少兩位授權管理人共同簽名。實物交付、物流、驗收和合規交易仍按線下合同執行。</p></div><span data-i18n="h077" class="security-badge">雙重簽名審核</span></div>
       </div>
     </section>
 
     <section class="section assets" id="assets">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">RWA MAPPING</div>
-          <h2>让现实资产的权益，<br><span class="text-blue">拥有清晰的链上表达。</span></h2>
-          <p>ACP 将 RWA 定义为权益、服务或收益凭证；每一类映射都以线下核验和明确的履约边界为基础。</p>
+          <div data-i18n="h078" class="eyebrow">RWA 映射</div>
+          <h2><span data-i18n="h079">讓現實資產的權益，</span><br> <span data-i18n="h080" class="text-blue">擁有清晰的鏈上表達。</span></h2>
+          <p data-i18n="h081">ACP 將 RWA 定義為權益、服務或收益憑證；每一類映射都以線下核驗和明確的履約邊界為基礎。</p>
         </div>
         <div class="asset-board reveal">
-          <div class="asset-tabs" role="tablist" aria-label="RWA 资产类别">
-            <button class="asset-tab" role="tab" id="tab-component" aria-selected="true" aria-controls="asset-panel" data-key="component"><span class="tab-no">01</span><span>构件资产 RWA</span></button>
-            <button class="asset-tab" role="tab" id="tab-service" aria-selected="false" aria-controls="asset-panel" data-key="service" tabindex="-1"><span class="tab-no">02</span><span>维修服务 RWA</span></button>
-            <button class="asset-tab" role="tab" id="tab-patent" aria-selected="false" aria-controls="asset-panel" data-key="patent" tabindex="-1"><span class="tab-no">03</span><span>专利技术 RWA</span></button>
-            <button class="asset-tab" role="tab" id="tab-capacity" aria-selected="false" aria-controls="asset-panel" data-key="capacity" tabindex="-1"><span class="tab-no">04</span><span>产能 RWA</span></button>
+          <div data-i18n-aria-label="h174" class="asset-tabs" role="tablist" aria-label="RWA 資產類別">
+            <button class="asset-tab" role="tab" id="tab-component" aria-selected="true" aria-controls="asset-panel" data-key="component"><span class="tab-no">01</span><span data-i18n="h082">構件資產 RWA</span></button>
+            <button class="asset-tab" role="tab" id="tab-service" aria-selected="false" aria-controls="asset-panel" data-key="service" tabindex="-1"><span class="tab-no">02</span><span data-i18n="h083">維修服務 RWA</span></button>
+            <button class="asset-tab" role="tab" id="tab-patent" aria-selected="false" aria-controls="asset-panel" data-key="patent" tabindex="-1"><span class="tab-no">03</span><span data-i18n="h084">專利技術 RWA</span></button>
+            <button class="asset-tab" role="tab" id="tab-capacity" aria-selected="false" aria-controls="asset-panel" data-key="capacity" tabindex="-1"><span class="tab-no">04</span><span data-i18n="h085">產能 RWA</span></button>
           </div>
           <div class="asset-panel" id="asset-panel" role="tabpanel" aria-labelledby="tab-component" tabindex="0">
-            <div class="eyebrow" id="asset-eyebrow">PHYSICAL COMPONENTS</div>
-            <h3 id="asset-title">构件资产 RWA</h3>
-            <p id="asset-copy">锚定高性能复合材料成品构件与备件权益，关联构件唯一标识、质量检测摘要及完整生命周期档案，支持后续资产流转和保险核验。</p>
-            <div class="asset-tags" id="asset-tags"><span>唯一资产标识</span><span>生命周期档案</span><span>质量核验</span></div>
-            <p class="asset-footnote">涉密相关实体资产不铸造可流通 RWA，仅按授权范围进行哈希存证。</p>
+            <div data-i18n="h086" class="eyebrow" id="asset-eyebrow">實體構件</div>
+            <h3 data-i18n="h082" id="asset-title">構件資產 RWA</h3>
+            <p data-i18n="h087" id="asset-copy">錨定高性能複合材料成品構件與備件權益，關聯構件唯一標識、質量檢測摘要及完整生命週期檔案，支持後續資產流轉和保險核驗。</p>
+            <div class="asset-tags" id="asset-tags"><span data-i18n="h088">唯一資產標識</span><span data-i18n="h089">生命週期檔案</span><span data-i18n="h090">質量核驗</span></div>
+            <p data-i18n="h091" class="asset-footnote">涉密相關實體資產不鑄造可流通 RWA，僅按授權範圍進行哈希存證。</p>
           </div>
         </div>
       </div>
@@ -485,28 +485,28 @@
     <section class="section tokenomics" id="tokenomics">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">TOKENOMICS · ACP</div>
-          <h2>用单一代币，<br><span class="text-blue">连接效用、激励与治理。</span></h2>
-          <p>ACP 用于协议治理、生态参与及协议层手续费消耗。质押和激励机制围绕链上业务设计，与实体企业线下经营收益隔离。</p>
+          <div data-i18n="h092" class="eyebrow">代幣經濟 · ACP</div>
+          <h2><span data-i18n="h093">用單一代幣，</span><br> <span data-i18n="h094" class="text-blue">連接效用、激勵與治理。</span></h2>
+          <p data-i18n="h095">ACP 用於協議治理、生態參與及協議層手續費消耗。質押和激勵機制圍繞鏈上業務設計，與實體企業線下經營收益隔離。</p>
         </div>
-        <div class="token-topline reveal"><div><small>GOVERNANCE & UTILITY TOKEN</small><strong>ACP</strong></div><div class="token-supply"><small>固定总供应量 · 永不增发</small><strong>1,000,000,000</strong></div></div>
+        <div class="token-topline reveal"><div><small data-i18n="h096">治理與效用代幣</small><strong>ACP</strong></div><div class="token-supply"><small data-i18n="h097">固定總供應量 · 永不增發</small><strong>1,000,000,000</strong></div></div>
         <div class="allocation reveal">
-          <h3>代币分配</h3>
-          <div class="stacked-bar" role="img" aria-label="代币分配：实体产业底座基金30%，DAO生态国库30%，技术研发与协议开发团队15%，生态社区与贡献激励20%，初始流动性储备5%"><span></span><span></span><span></span><span></span><span></span></div>
+          <h3 data-i18n="h098">代幣分配</h3>
+          <div data-i18n-aria-label="h175" class="stacked-bar" role="img" aria-label="代幣分配：實體產業底座基金30%，DAO生態國庫30%，技術研發與協議開發團隊15%，生態社區與貢獻激勵20%，初始流動性儲備5%"><span></span><span></span><span></span><span></span><span></span></div>
           <div class="allocation-list">
-            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#125EA0"></i>实体产业底座基金</div><small>4 年线性解锁，设 12 个月锁仓期；用于技术升级与 RWA 底层资产建设。</small></div><span class="allocation-percent">30%</span></div>
-            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#2d82b9"></i>DAO 生态国库</div><small>5 年线性解锁；由 DAO 提案支配，用于科研众筹、生态与开发者激励。</small></div><span class="allocation-percent">30%</span></div>
-            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#64a9cf"></i>技术研发与协议开发</div><small>3 年线性解锁，设 12 个月锁仓期。</small></div><span class="allocation-percent">15%</span></div>
-            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#72bdb4"></i>生态社区与贡献激励</div><small>按贡献逐步释放，不一次性释放。</small></div><span class="allocation-percent">20%</span></div>
-            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#a6cf9e"></i>初始流动性储备</div><small>50% 上线释放，剩余 50% 分 2 年解锁。</small></div><span class="allocation-percent">5%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#125EA0"></i><span data-i18n="h099">實體產業底座基金</span></div><small data-i18n="h100">4 年線性解鎖，設 12 個月鎖倉期；用於技術升級與 RWA 底層資產建設。</small></div><span class="allocation-percent">30%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#2d82b9"></i><span data-i18n="h101">DAO 生態國庫</span></div><small data-i18n="h102">5 年線性解鎖；由 DAO 提案支配，用於科研眾籌、生態與開發者激勵。</small></div><span class="allocation-percent">30%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#64a9cf"></i><span data-i18n="h103">技術研發與協議開發</span></div><small data-i18n="h104">3 年線性解鎖，設 12 個月鎖倉期。</small></div><span class="allocation-percent">15%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#72bdb4"></i><span data-i18n="h105">生態社區與貢獻激勵</span></div><small data-i18n="h106">按貢獻逐步釋放，不一次性釋放。</small></div><span class="allocation-percent">20%</span></div>
+            <div class="allocation-row"><div><div class="allocation-name"><i style="--dot:#a6cf9e"></i><span data-i18n="h107">初始流動性儲備</span></div><small data-i18n="h108">50% 上線釋放，剩餘 50% 分 2 年解鎖。</small></div><span class="allocation-percent">5%</span></div>
           </div>
         </div>
         <div class="staking-grid">
-          <article class="staking-card reveal"><small>01 / GOVERNANCE</small><h3>质押治理 · veACP</h3><p>锁定 ACP 获得治理凭证，投票权重依据质押额度与期限计算，白皮书规划最高可提升至 1—3 倍。</p></article>
-          <article class="staking-card reveal"><small>02 / RWA POOL</small><h3>RWA 收益池</h3><p>质押参与链上可分配的维修服务履约手续费与专利技术授权分润，实际分配以对应业务和治理规则为准。</p></article>
-          <article class="staking-card reveal"><small>03 / LIQUIDITY</small><h3>流动性参与</h3><p>为 ACP / 稳定币交易对提供流动性，可按协议规则获得交易手续费分成和生态激励。</p></article>
+          <article class="staking-card reveal"><small data-i18n="h109">01 / 治理</small><h3 data-i18n="h110">質押治理 · veACP</h3><p data-i18n="h111">鎖定 ACP 獲得治理憑證，投票權重依據質押額度與期限計算，白皮書規劃最高可提升至 1—3 倍。</p></article>
+          <article class="staking-card reveal"><small data-i18n="h112">02 / RWA 收益池</small><h3 data-i18n="h113">RWA 收益池</h3><p data-i18n="h114">質押參與鏈上可分配的維修服務履約手續費與專利技術授權分潤，實際分配以對應業務和治理規則為準。</p></article>
+          <article class="staking-card reveal"><small data-i18n="h115">03 / 流動性</small><h3 data-i18n="h116">流動性參與</h3><p data-i18n="h117">為 ACP / 穩定幣交易對提供流動性，可按協議規則獲得交易手續費分成和生態激勵。</p></article>
         </div>
-        <p class="token-note reveal">协议激励来自链上手续费、DAO 国库预算与流动性激励，不承诺固定收益率。实体企业线下经营利润不直接分配给代币持有人；实体商品采购仍通过线下合同与法币结算。</p>
+        <p data-i18n="h118" class="token-note reveal">協議激勵來自鏈上手續費、DAO 國庫預算與流動性激勵，不承諾固定收益率。實體企業線下經營利潤不直接分配給代幣持有人；實體商品採購仍通過線下合同與法幣結算。</p>
       </div>
     </section>
 
@@ -514,12 +514,12 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div class="eyebrow">ACP-DAO</div>
-          <h2>让产业知识，<br><span class="text-blue">参与协议的共同治理。</span></h2>
-          <p>ACP-DAO 采用混合治理：社区负责生态与协议提案，实体项目方守住资产真实性、保密和重大产能决策边界。</p>
+          <h2><span data-i18n="h119">讓產業知識，</span><br> <span data-i18n="h120" class="text-blue">參與協議的共同治理。</span></h2>
+          <p data-i18n="h121">ACP-DAO 採用混合治理：社區負責生態與協議提案，實體項目方守住資產真實性、保密和重大產能決策邊界。</p>
         </div>
         <div class="governance-grid">
-          <article class="gov-card reveal"><h3>多元成员协同</h3><p>治理权重综合质押 ACP 与科研贡献，推动产业经验、技术成果与生态参与进入共同决策。</p><div class="role-list"><div class="role"><strong>核心实体理事</strong><span>核验实体资产与涉密风险；对高风险事项保留否决权。</span></div><div class="role"><strong>科研机构成员</strong><span>提出研发方向、输出工艺与专利，参与协同研发。</span></div><div class="role"><strong>产业合作方</strong><span>提出真实需求、订单与应用场景，连接制造与装备用户。</span></div><div class="role"><strong>社区贡献者</strong><span>以质押与生态贡献参与投票、开发和社区建设。</span></div></div></article>
-          <article class="gov-card gov-card-dark reveal"><h3>提案如何生效</h3><p>按事项风险等级设置参与率与审议路径，涉密事项不进入公开 DAO 投票。</p><div class="decision-list"><div class="decision"><b>01</b><span>普通生态、科研与协议参数提案由社区投票决定。</span></div><div class="decision"><b>02</b><span>新增 RWA 类别或大额国库支出需要更高参与率，并经过实体理事审查。</span></div><div class="decision"><b>03</b><span>重大产能投资及涉密相关事项依实体审批流程处理。</span></div><div class="decision"><b>04</b><span>DAO 国库支出用于协议生态；不替代实体基地的日常经营资金。</span></div></div></article>
+          <article class="gov-card reveal"><h3 data-i18n="h122">多元成員協同</h3><p data-i18n="h123">治理權重綜合質押 ACP 與科研貢獻，推動產業經驗、技術成果與生態參與進入共同決策。</p><div class="role-list"><div class="role"><strong data-i18n="h124">核心實體理事</strong><span data-i18n="h125">核驗實體資產與涉密風險；對高風險事項保留否決權。</span></div><div class="role"><strong data-i18n="h126">科研機構成員</strong><span data-i18n="h127">提出研發方向、輸出工藝與專利，參與協同研發。</span></div><div class="role"><strong data-i18n="h128">產業合作方</strong><span data-i18n="h129">提出真實需求、訂單與應用場景，連接製造與裝備用戶。</span></div><div class="role"><strong data-i18n="h130">社區貢獻者</strong><span data-i18n="h131">以質押與生態貢獻參與投票、開發和社區建設。</span></div></div></article>
+          <article class="gov-card gov-card-dark reveal"><h3 data-i18n="h132">提案如何生效</h3><p data-i18n="h133">按事項風險等級設置參與率與審議路徑，涉密事項不進入公開 DAO 投票。</p><div class="decision-list"><div class="decision"><b>01</b><span data-i18n="h134">普通生態、科研與協議參數提案由社區投票決定。</span></div><div class="decision"><b>02</b><span data-i18n="h135">新增 RWA 類別或大額國庫支出需要更高參與率，並經過實體理事審查。</span></div><div class="decision"><b>03</b><span data-i18n="h136">重大產能投資及涉密相關事項依實體審批流程處理。</span></div><div class="decision"><b>04</b><span data-i18n="h137">DAO 國庫支出用於協議生態；不替代實體基地的日常經營資金。</span></div></div></article>
         </div>
       </div>
     </section>
@@ -527,97 +527,38 @@
     <section class="section roadmap" id="roadmap">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">ROADMAP</div>
-          <h2>从实体落地开始，<br><span class="text-blue">逐步扩展协同网络。</span></h2>
-          <p>路线图围绕实体能力、链上存证、科研协作和制造网络逐段推进。各阶段以合规、审计与实际业务验证为前提。</p>
+          <div data-i18n="h138" class="eyebrow">路線圖</div>
+          <h2><span data-i18n="h139">從實體落地開始，</span><br> <span data-i18n="h140" class="text-blue">逐步擴展協同網絡。</span></h2>
+          <p data-i18n="h141">路線圖圍繞實體能力、鏈上存證、科研協作和製造網絡逐段推進。各階段以合規、審計與實際業務驗證為前提。</p>
         </div>
         <div class="roadmap-list">
-          <article class="phase reveal"><div class="phase-card"><small>PHASE 01 · 0—12 MONTHS</small><h3>实体落地与链上存证</h3><ul><li>建设生产基地并推进相关资质</li><li>部署网关、溯源和存证合约</li><li>完成首批非涉密 RWA 映射</li></ul></div></article>
-          <article class="phase reveal"><div class="phase-card"><small>PHASE 02 · 12—24 MONTHS</small><h3>DAO 协同与 RWA 拓展</h3><ul><li>启动 DAO 协同研发项目</li><li>拓展专利技术与产能 RWA</li><li>连接高校、研究机构与产业客户</li></ul></div></article>
-          <article class="phase reveal"><div class="phase-card"><small>PHASE 03 · 24—36 MONTHS</small><h3>去中心化制造网络</h3><ul><li>接入外部合规生产基地</li><li>推进跨链互通与标准化</li><li>扩展跨机构科研协作</li></ul></div></article>
-          <article class="phase reveal"><div class="phase-card"><small>PHASE 04 · 36+ MONTHS</small><h3>成熟生态</h3><ul><li>完善全生命周期资产标准</li><li>迭代链上协同基础设施</li><li>持续连接全球产业伙伴</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small data-i18n="h142">階段 01 · 0—12 個月</small><h3 data-i18n="h143">實體落地與鏈上存證</h3><ul><li data-i18n="h144">建設生產基地並推進相關資質</li><li data-i18n="h145">部署網關、溯源和存證合約</li><li data-i18n="h146">完成首批非涉密 RWA 映射</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small data-i18n="h147">階段 02 · 12—24 個月</small><h3 data-i18n="h148">DAO 協同與 RWA 拓展</h3><ul><li data-i18n="h149">啟動 DAO 協同研發項目</li><li data-i18n="h150">拓展專利技術與產能 RWA</li><li data-i18n="h151">連接高校、研究機構與產業客戶</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small data-i18n="h152">階段 03 · 24—36 個月</small><h3 data-i18n="h153">去中心化製造網絡</h3><ul><li data-i18n="h154">接入外部合規生產基地</li><li data-i18n="h155">推進跨鏈互通與標準化</li><li data-i18n="h156">擴展跨機構科研協作</li></ul></div></article>
+          <article class="phase reveal"><div class="phase-card"><small data-i18n="h157">階段 04 · 36+ 個月</small><h3 data-i18n="h158">成熟生態</h3><ul><li data-i18n="h159">完善全生命週期資產標準</li><li data-i18n="h160">迭代鏈上協同基礎設施</li><li data-i18n="h161">持續連接全球產業夥伴</li></ul></div></article>
         </div>
       </div>
     </section>
 
     <section class="resources" id="resources">
       <div class="wrap resource-row reveal">
-        <div><h2>从白皮书，开始了解 ACP。</h2><p>查看项目愿景、ACP 协议设计、RWA 映射机制、代币模型与路线图。</p></div>
-        <a class="button" href="/assets/ACP_Whitepaper_V1.1.pdf" download>下载白皮书 <span aria-hidden="true">↓</span></a>
+        <div><h2 data-i18n="h162">從白皮書，開始瞭解 ACP。</h2><p data-i18n="h163">查看項目願景、ACP 協議設計、RWA 映射機制、代幣模型與路線圖。</p></div>
+        <a class="button" href="/assets/ACP_Whitepaper_V1.1.pdf" download=""><span data-i18n="h164">下載原版 PDF（簡體中文 · V1.1）</span><span aria-hidden="true">↓</span></a>
       </div>
     </section>
-  </main>
+  </main><main hidden id="whitepaper"></main>
 
   <footer>
     <div class="wrap">
       <div class="footer-top">
-        <a class="footer-brand" href="#home"><img src="/assets/acp-mark.svg" alt=""><span><strong>ACP</strong><small>ADVANCED COMPOSITES PROTOCOL</small></span></a>
-        <nav class="footer-nav" aria-label="页脚导航"><a href="#protocol">协议架构</a><a href="#assets">RWA 资产</a><a href="#tokenomics">代币经济</a><a href="#governance">DAO 治理</a><a href="/assets/ACP_Whitepaper_V1.1.pdf" target="_blank" rel="noopener">白皮书</a></nav>
+        <a class="footer-brand" href="/#home"><img src="/assets/acp-mark.svg" alt=""><span><strong>ACP</strong><small>ADVANCED COMPOSITES PROTOCOL</small></span></a>
+        <nav data-i18n-aria-label="h176" class="footer-nav" aria-label="頁腳導航"><a data-i18n="h001" href="/#protocol">協議架構</a><a data-i18n="h002" href="/#assets">RWA 資產</a><a data-i18n="h003" href="/#tokenomics">代幣經濟</a><a data-i18n="h004" href="/#governance">DAO 治理</a><a data-i18n="h006" href="/whitepaper">白皮書</a></nav>
       </div>
-      <p class="footer-note">ACP 为协议治理与效用代币，不代表实体公司股权，不构成固定收益承诺。RWA 凭证不等同于实物本身；实物交易、交付、物流和验收按适用的线下合同与流程执行。网站内容依据项目白皮书 V1.1 整理，具体业务与治理机制以正式协议、合约及后续公告为准。</p>
-      <div class="footer-bottom"><span>© <span id="year"></span> ACP · Advanced Composites Protocol</span><span>Built around traceability, verifiable assets & collaborative research.</span></div>
+      <p data-i18n="h165" class="footer-note">ACP 為協議治理與效用代幣，不代表實體公司股權，不構成固定收益承諾。RWA 憑證不等同於實物本身；實物交易、交付、物流和驗收按適用的線下合同與流程執行。網站內容依據項目白皮書 V1.1 整理，具體業務與治理機制以正式協議、合約及後續公告為準。</p>
+      <div class="footer-bottom"><span>© <span id="year"></span><span data-i18n="h166">ACP · Advanced Composites Protocol</span></span><span data-i18n="h167">以可信溯源、可驗證資產與協同研發為核心。</span></div>
     </div>
   </footer>
 
-  <script>
-    const topbar = document.getElementById("topbar");
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-    const setMenu = (open) => {
-      navLinks.classList.toggle("open", open);
-      menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.setAttribute("aria-label", open ? "关闭导航菜单" : "打开导航菜单");
-    };
-    menuToggle.addEventListener("click", () => setMenu(menuToggle.getAttribute("aria-expanded") !== "true"));
-    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
-    window.addEventListener("scroll", () => topbar.classList.toggle("scrolled", window.scrollY > 8), { passive: true });
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const assetData = {
-      component: { eyebrow: "PHYSICAL COMPONENTS", title: "构件资产 RWA", copy: "锚定高性能复合材料成品构件与备件权益，关联构件唯一标识、质量检测摘要及完整生命周期档案，支持后续资产流转和保险核验。", tags: ["唯一资产标识", "生命周期档案", "质量核验"] },
-      service: { eyebrow: "REPAIR SERVICES", title: "维修服务 RWA", copy: "以标准化内场或外场维修服务包为锚定对象。装备用户发起工单后，按约定调度服务并记录履约过程，服务完成后核销对应凭证。", tags: ["标准化服务包", "工单状态同步", "完成后核销"] },
-      patent: { eyebrow: "IP & RESEARCH", title: "专利技术 RWA", copy: "围绕新型复合材料工艺、修理技术专利与科研成果建立权益映射，支持 DAO 协同研发，并依据线下协议记录链上可分配部分。", tags: ["技术成果确权", "协同研发", "规则化分账"] },
-      capacity: { eyebrow: "MANUFACTURING CAPACITY", title: "产能 RWA", copy: "将研发试制与生产制造的可用产能额度形成可调用的配额表达，用于供需撮合，逐步改善闲置产能与临时需求之间的错配。", tags: ["试制能力", "产能配额", "供需撮合"] }
-    };
-    const tabs = [...document.querySelectorAll(".asset-tab")];
-    const panel = document.getElementById("asset-panel");
-    const renderAsset = (key) => {
-      const item = assetData[key];
-      const activeTab = tabs.find((tab) => tab.dataset.key === key);
-      tabs.forEach((tab) => {
-        const active = tab === activeTab;
-        tab.setAttribute("aria-selected", String(active));
-        tab.tabIndex = active ? 0 : -1;
-      });
-      panel.setAttribute("aria-labelledby", activeTab.id);
-      document.getElementById("asset-eyebrow").textContent = item.eyebrow;
-      document.getElementById("asset-title").textContent = item.title;
-      document.getElementById("asset-copy").textContent = item.copy;
-      document.getElementById("asset-tags").replaceChildren(...item.tags.map((label) => {
-        const tag = document.createElement("span"); tag.textContent = label; return tag;
-      }));
-    };
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => renderAsset(tab.dataset.key));
-      tab.addEventListener("keydown", (event) => {
-        if (!["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"].includes(event.key)) return;
-        event.preventDefault();
-        const delta = ["ArrowDown", "ArrowRight"].includes(event.key) ? 1 : -1;
-        const next = tabs[(index + delta + tabs.length) % tabs.length];
-        renderAsset(next.dataset.key); next.focus();
-      });
-    });
-
-    const revealItems = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible"); observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.08 });
-      revealItems.forEach((item) => observer.observe(item));
-    } else revealItems.forEach((item) => item.classList.add("visible"));
-  </script>
-</body>
+<div role="alert" hidden id="load-status" class="load-status"><span id="load-message"></span><button type="button" id="retry-button">重試</button></div><script id="initial-home" type="application/json">{"h001":"協議架構","h002":"RWA 資產","h003":"代幣經濟","h004":"DAO 治理","h005":"路線圖","h006":"白皮書","h007":"現實世界資產 × 去中心化創新","h008":"讓先進複合材料的","h009":"每一段生命週期","h010":"都有跡可循。","h011":"從原材料溯源，到構件製造、維修服務與科研成果轉化，ACP 將實體產業流程連接為可驗證、可協同的鏈上協議網絡。","h012":"閱讀白皮書","h013":"探索協議","h014":"北京研發中心","h015":"開江生產基地","h016":"ACP 治理與效用代幣","h017":"可信溯源","h018":"RWA 映射","h019":"科研協同","h020":"協議 01","h021":"RWA · 生命週期","h022":"1B","h023":"ACP 固定總供應量","h024":"4 層","h025":"協議技術架構","h026":"4 類","h027":"現實資產映射方向","h028":"36+ 月","h029":"分階段生態建設規劃","h030":"為何選擇 ACP","h031":"把產業協作中的","h032":"斷點，變成可驗證的連接。","h033":"先進複合材料貫穿研發、生產、使用和維修。ACP 以實體業務為起點，針對全生命週期中的信息斷層、資產流動性和跨機構協作問題，設計可追溯、可確權、可協作的協議流程。","h034":"01 / 溯源","h035":"溯源與質量確權","h036":"原材料批次、構件工序、檢測和維修記錄分散，質量檔案難以連續核驗。","h037":"02 / 資產流通","h038":"高價值資產難流轉","h039":"構件、維修服務與技術成果的權益表達缺少通用映射，影響共享與協作。","h040":"03 / 產能","h041":"產能與需求錯配","h042":"研發、製造與裝備用戶之間的信息孤島，使試製和生產資源難以及時匹配。","h043":"04 / 協作","h044":"科研協作與分配","h045":"多方聯合研發的貢獻記錄和收益分配依賴線下協商，成果轉化鏈路較長。","h046":"一種材料 · 完整生命週期","h047":"從一批原料，","h048":"到持續演進的資產檔案。","h049":"鏈上記錄關鍵狀態與數據指紋，實體核驗、物流、交付和服務仍在線下按業務流程完成。","h050":"原料與入庫","h051":"碳纖維、樹脂等批次生成唯一標識，關鍵流轉記錄留痕。","h052":"研發與製造","h053":"關聯工序、檢測報告和構件狀態，構建連續質量檔案。","h054":"服役與維修","h055":"維修工單接續構件檔案，服務憑證按約定流程核銷。","h056":"技術成果轉化","h057":"記錄研發貢獻與成果權益，支持協同項目的規則化分配。","h058":"數據邊界","h059":"涉密業務原始數據保留在線下安全系統；協議側僅保存經授權的哈希摘要與必要狀態信息。涉密資產不發行可流通 RWA 憑證。","h060":"協議架構","h061":"實體流程與鏈上協作，","h062":"由四層架構串聯。","h063":"ACP 將實體感知、鏈下存證網關、區塊鏈協議與應用交互分層設計，使資產核驗、數據保護和協議治理各有邊界。","h064":"第 01 層","h065":"實體感知層","h066":"研發、生產、檢測、倉儲與維修等線下業務系統，保留原始記錄。","h067":"第 02 層","h068":"計算數據哈希、校驗簽名、核驗 RWA 資產並同步訂單和維修工單狀態。","h069":"第 03 層","h070":"區塊鏈協議層","h071":"聯盟鏈承擔受控業務存證；公鏈側承載 RWA 憑證、治理與生態協同。","h072":"第 04 層","h073":"應用交互層","h074":"面向產業方、裝備用戶、DAO 成員和資產參與者提供對應業務入口。","h075":"鏈上可驗證，線下可核驗","h076":"RWA 鑄造須經過實體資產核驗和至少兩位授權管理人共同簽名。實物交付、物流、驗收和合規交易仍按線下合同執行。","h077":"雙重簽名審核","h078":"RWA 映射","h079":"讓現實資產的權益，","h080":"擁有清晰的鏈上表達。","h081":"ACP 將 RWA 定義為權益、服務或收益憑證；每一類映射都以線下核驗和明確的履約邊界為基礎。","h082":"構件資產 RWA","h083":"維修服務 RWA","h084":"專利技術 RWA","h085":"產能 RWA","h086":"實體構件","h087":"錨定高性能複合材料成品構件與備件權益，關聯構件唯一標識、質量檢測摘要及完整生命週期檔案，支持後續資產流轉和保險核驗。","h088":"唯一資產標識","h089":"生命週期檔案","h090":"質量核驗","h091":"涉密相關實體資產不鑄造可流通 RWA，僅按授權範圍進行哈希存證。","h092":"代幣經濟 · ACP","h093":"用單一代幣，","h094":"連接效用、激勵與治理。","h095":"ACP 用於協議治理、生態參與及協議層手續費消耗。質押和激勵機制圍繞鏈上業務設計，與實體企業線下經營收益隔離。","h096":"治理與效用代幣","h097":"固定總供應量 · 永不增發","h098":"代幣分配","h099":"實體產業底座基金","h100":"4 年線性解鎖，設 12 個月鎖倉期；用於技術升級與 RWA 底層資產建設。","h101":"DAO 生態國庫","h102":"5 年線性解鎖；由 DAO 提案支配，用於科研眾籌、生態與開發者激勵。","h103":"技術研發與協議開發","h104":"3 年線性解鎖，設 12 個月鎖倉期。","h105":"生態社區與貢獻激勵","h106":"按貢獻逐步釋放，不一次性釋放。","h107":"初始流動性儲備","h108":"50% 上線釋放，剩餘 50% 分 2 年解鎖。","h109":"01 / 治理","h110":"質押治理 · veACP","h111":"鎖定 ACP 獲得治理憑證，投票權重依據質押額度與期限計算，白皮書規劃最高可提升至 1—3 倍。","h112":"02 / RWA 收益池","h113":"RWA 收益池","h114":"質押參與鏈上可分配的維修服務履約手續費與專利技術授權分潤，實際分配以對應業務和治理規則為準。","h115":"03 / 流動性","h116":"流動性參與","h117":"為 ACP / 穩定幣交易對提供流動性，可按協議規則獲得交易手續費分成和生態激勵。","h118":"協議激勵來自鏈上手續費、DAO 國庫預算與流動性激勵，不承諾固定收益率。實體企業線下經營利潤不直接分配給代幣持有人；實體商品採購仍通過線下合同與法幣結算。","h119":"讓產業知識，","h120":"參與協議的共同治理。","h121":"ACP-DAO 採用混合治理：社區負責生態與協議提案，實體項目方守住資產真實性、保密和重大產能決策邊界。","h122":"多元成員協同","h123":"治理權重綜合質押 ACP 與科研貢獻，推動產業經驗、技術成果與生態參與進入共同決策。","h124":"核心實體理事","h125":"核驗實體資產與涉密風險；對高風險事項保留否決權。","h126":"科研機構成員","h127":"提出研發方向、輸出工藝與專利，參與協同研發。","h128":"產業合作方","h129":"提出真實需求、訂單與應用場景，連接製造與裝備用戶。","h130":"社區貢獻者","h131":"以質押與生態貢獻參與投票、開發和社區建設。","h132":"提案如何生效","h133":"按事項風險等級設置參與率與審議路徑，涉密事項不進入公開 DAO 投票。","h134":"普通生態、科研與協議參數提案由社區投票決定。","h135":"新增 RWA 類別或大額國庫支出需要更高參與率，並經過實體理事審查。","h136":"重大產能投資及涉密相關事項依實體審批流程處理。","h137":"DAO 國庫支出用於協議生態；不替代實體基地的日常經營資金。","h138":"路線圖","h139":"從實體落地開始，","h140":"逐步擴展協同網絡。","h141":"路線圖圍繞實體能力、鏈上存證、科研協作和製造網絡逐段推進。各階段以合規、審計與實際業務驗證為前提。","h142":"階段 01 · 0—12 個月","h143":"實體落地與鏈上存證","h144":"建設生產基地並推進相關資質","h145":"部署網關、溯源和存證合約","h146":"完成首批非涉密 RWA 映射","h147":"階段 02 · 12—24 個月","h148":"DAO 協同與 RWA 拓展","h149":"啟動 DAO 協同研發項目","h150":"拓展專利技術與產能 RWA","h151":"連接高校、研究機構與產業客戶","h152":"階段 03 · 24—36 個月","h153":"去中心化製造網絡","h154":"接入外部合規生產基地","h155":"推進跨鏈互通與標準化","h156":"擴展跨機構科研協作","h157":"階段 04 · 36+ 個月","h158":"成熟生態","h159":"完善全生命週期資產標準","h160":"迭代鏈上協同基礎設施","h161":"持續連接全球產業夥伴","h162":"從白皮書，開始瞭解 ACP。","h163":"查看項目願景、ACP 協議設計、RWA 映射機制、代幣模型與路線圖。","h164":"下載原版 PDF（簡體中文 · V1.1）","h165":"ACP 為協議治理與效用代幣，不代表實體公司股權，不構成固定收益承諾。RWA 憑證不等同於實物本身；實物交易、交付、物流和驗收按適用的線下合同與流程執行。網站內容依據項目白皮書 V1.1 整理，具體業務與治理機制以正式協議、合約及後續公告為準。","h166":"ACP · Advanced Composites Protocol","h167":"以可信溯源、可驗證資產與協同研發為核心。","h168":"ACP 首頁","h169":"ACP 幾何標誌","h170":"主導航","h171":"打開導航菜單","h172":"複合材料從實體數據到鏈上應用的示意圖","h173":"協議概覽","h174":"RWA 資產類別","h175":"代幣分配：實體產業底座基金30%，DAO生態國庫30%，技術研發與協議開發團隊15%，生態社區與貢獻激勵20%，初始流動性儲備5%","h176":"頁腳導航","h177":"ACP / Advanced Composites Protocol：以鏈上可信溯源、RWA 權益映射與協同治理，連接先進複合材料的研發、製造與服務。","h178":"讓先進複合材料的每一段生命週期，都有跡可循。","h179":"維修服務","h180":"以標準化內場或外場維修服務包為錨定對象。裝備用戶發起工單後，按約定調度服務並記錄履約過程，服務完成後核銷對應憑證。","h181":"標準化服務包","h182":"工單狀態同步","h183":"完成後核銷","h184":"智慧財產與研發","h185":"圍繞新型複合材料工藝、修理技術專利與科研成果建立權益映射，支持 DAO 協同研發，並依據線下協議記錄鏈上可分配部分。","h186":"技術成果確權","h187":"協同研發","h188":"規則化分賬","h189":"製造產能","h190":"將研發試製與生產製造的可用產能額度形成可調用的配額表達，用於供需撮合，逐步改善閒置產能與臨時需求之間的錯配。","h191":"試製能力","h192":"產能配額","h193":"供需撮合"}</script><script src="/assets/app.js" type="module"></script></body>
 </html>

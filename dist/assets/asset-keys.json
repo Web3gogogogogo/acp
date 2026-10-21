@@ -1,0 +1,42 @@
+{
+  "component": {
+    "eyebrow": "h086",
+    "title": "h082",
+    "copy": "h087",
+    "tags": [
+      "h088",
+      "h089",
+      "h090"
+    ]
+  },
+  "service": {
+    "eyebrow": "h179",
+    "title": "h083",
+    "copy": "h180",
+    "tags": [
+      "h181",
+      "h182",
+      "h183"
+    ]
+  },
+  "patent": {
+    "eyebrow": "h184",
+    "title": "h084",
+    "copy": "h185",
+    "tags": [
+      "h186",
+      "h187",
+      "h188"
+    ]
+  },
+  "capacity": {
+    "eyebrow": "h189",
+    "title": "h085",
+    "copy": "h190",
+    "tags": [
+      "h191",
+      "h192",
+      "h193"
+    ]
+  }
+}

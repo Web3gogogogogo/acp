@@ -4,8 +4,9 @@
   "private": true,
   "description": "Advanced Composites Protocol static website",
   "scripts": {
-    "dev": "serve dist --listen tcp://127.0.0.1:3000",
-    "start": "npm run dev"
+    "dev": "serve dist --config ../serve.json --listen tcp://127.0.0.1:3000 --no-clipboard --no-port-switching",
+    "start": "npm run dev",
+    "check": "node scripts/check-content.mjs"
   },
   "devDependencies": {
     "serve": "14.2.6"
