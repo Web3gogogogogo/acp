@@ -85,8 +85,9 @@ function buildPaper(dict, lang) {
   const hero = el('header', undefined, 'paper-hero wrap'); hero.id = 'whitepaper-top';
   hero.append(el('div', 'ACP / V1.1', 'eyebrow'), el('h1', t.title), el('p', t.subtitle, 'paper-subtitle'), el('p', t.source, 'paper-source'));
   const actions = el('div', undefined, 'paper-actions');
+  actions.append(link(t.read, '/whitepaper#chapter-1', 'button button-primary'));
   actions.append(link(t.back, '/', 'button button-ghost'));
-  const download = link(t.download, '/assets/ACP_Whitepaper_V1.1.pdf', 'button button-primary'); download.download = 'ACP_Whitepaper_V1.1.pdf';
+  const download = link(t.download, '/assets/ACP_Whitepaper_V1.1.pdf', 'paper-download'); download.download = 'ACP_Whitepaper_V1.1.pdf';
   actions.append(download); hero.append(actions); fragment.append(hero);
   const layout = el('div', undefined, 'paper-layout wrap');
   const side = el('aside', undefined, 'paper-sidebar');
@@ -156,7 +157,10 @@ async function transition(lang, url = new URL(location.href), historyMode = null
     document.title = destination === '/whitepaper' ? ui[lang].paperTitle : ui[lang].homeTitle;
     document.querySelector('meta[property="og:title"]').content = document.title;
     if (destination === '/whitepaper') for (const meta of document.querySelectorAll('meta[name="description"],meta[property="og:description"]')) meta.content = ui[lang].subtitle;
-    home.hidden = destination !== '/'; paper.hidden = destination !== '/whitepaper'; footer.hidden = destination !== '/';
+    home.hidden = destination !== '/'; paper.hidden = destination !== '/whitepaper'; footer.hidden = false;
+    for (const a of document.querySelectorAll('#topbar a[href="/whitepaper"],footer a[href="/whitepaper"]')) {
+      if (destination === '/whitepaper') a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    }
     document.body.classList.toggle('reading-paper', destination === '/whitepaper');
     if (historyMode === 'push') history.pushState({}, '', url.pathname + url.hash);
     if (oldChapter) scrollToHash('#' + oldChapter); else if (!changingLanguage) scrollToHash(url.hash);
